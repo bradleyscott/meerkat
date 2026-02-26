@@ -12,6 +12,12 @@ me/
 # Generated outputs from skill runs
 **/outputs/
 
+# Meerkat website
+www/
+
 # Company-specific data directories
 # /onboard appends your directory name here automatically
 gentrack/
+
+# Local Netlify folder
+.netlify
