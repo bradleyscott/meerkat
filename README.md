@@ -62,13 +62,13 @@ cd my-pm-context
 cp config.json.example config.json
 ```
 
-Then in [Claude Code](https://claude.ai/code):
+Then in [Claude Code](https://claude.ai/code) or [Cursor](https://cursor.com):
 
 1. Run `/onboard` — a guided conversation that captures your company, product, and role context, then builds your workspace (this populates `config.json` for you)
 2. Run `/opportunity-interview` to explore your first product idea
 3. Run `/research-competitors` to profile a key competitor
 
-Works best with Claude Code. For Amazon Q or other AI coding tools, see the [skills setup guide](skills/README.md#setting-up-skills-in-ai-coding-tools).
+Slash commands work out of the box with both **Claude Code** and **Cursor** — no extra configuration needed. For Amazon Q or other AI coding tools, see the [skills setup guide](skills/README.md#setting-up-skills-in-ai-coding-tools).
 
 ## How It Works
 
@@ -98,13 +98,17 @@ git pull origin main
 
 **Slack** — The monitoring skills (`/monitor-competitors`, `/monitor-industry`) can post updates to Slack channels via the [Slack MCP server](https://docs.slack.dev/ai/slack-mcp-server/).
 
-To configure integrations, copy the example MCP config and fill in your credentials:
+Both Claude Code and Cursor support MCP servers. To configure integrations, copy the example MCP config and fill in your credentials:
 
 ```bash
+# Claude Code
 cp .mcp.json.example .mcp.json
+
+# Cursor — copy to the Cursor-specific location
+cp .mcp.json.example .cursor/mcp.json
 ```
 
-Both `config.json` and `.mcp.json` are gitignored — your credentials stay local.
+All config files (`config.json`, `.mcp.json`, `.cursor/mcp.json`) are gitignored — your credentials stay local.
 
 ## Extending
 

@@ -4,6 +4,7 @@
 # User-specific configuration
 .mcp.json
 .claude/settings.local.json
+.cursor/mcp.json
 config.json
 
 # Personal context (AI voice training)

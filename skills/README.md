@@ -116,41 +116,27 @@ skills/assumption-identifier/
 
 ### Claude Code
 
-Claude Code discovers skills automatically from `.claude/skills/`. You have two options:
+This repo ships with pre-configured commands in `.claude/commands/` — all skills work as slash commands out of the box. Just clone and start using `/onboard`, `/opportunity-interview`, etc.
 
-**Option A: Move skills to `.claude/skills/` (recommended for Claude Code users)**
-
-Copy or symlink the skill directories into the Claude Code skills location:
+Claude Code also discovers skills automatically from `.claude/skills/`. If you prefer that approach, symlink the skill directories:
 
 ```bash
-# Symlink all skills
 ln -s ../../skills/opportunity-interviewer .claude/skills/opportunity-interviewer
 ln -s ../../skills/assumption-identifier .claude/skills/assumption-identifier
-ln -s ../../skills/validation-suggester .claude/skills/validation-suggester
 ```
 
-Once in `.claude/skills/`, skills are automatically available as slash commands:
-- `/opportunity-interviewer` — start an opportunity interview
-- `/assumption-identifier path/to/document.md` — analyse a document for risks
-- `/validation-suggester path/to/assumptions.md` — get validation recommendations
+Claude Code auto-invokes skills when it recognises a relevant request from the skill's `description` field.
 
-Claude Code also auto-invokes skills when it recognises a relevant request from the skill's `description` field.
+### Cursor
 
-**Option B: Create wrapper commands in `.claude/commands/`**
+This repo ships with pre-configured commands in `.cursor/commands/` and project rules in `.cursor/rules/` — all skills work as slash commands out of the box. Just clone and start using `/onboard`, `/opportunity-interview`, etc.
 
-If you prefer to keep skills in `skills/` without symlinks, create thin wrapper files in `.claude/commands/` that reference the full skill:
+Type `/` in the Cursor Agent input to see all available commands.
 
-```yaml
-# .claude/commands/assumption-identifier.md
----
-description: Analyse a document to identify risks and untested assumptions
-argument-hint: [document-path]
-allowed-tools: Read, Edit, Glob, Write
----
+**MCP servers** (for Confluence and Slack integrations): copy the example config to `.cursor/mcp.json` and fill in your credentials:
 
-Read and follow the complete skill instructions in skills/assumption-identifier/SKILL.md
-
-The document to analyse is: $ARGUMENTS
+```bash
+cp .mcp.json.example .cursor/mcp.json
 ```
 
 ### Amazon Q Developer CLI
@@ -191,4 +177,6 @@ To add a new skill:
    ```
 3. Define a clear workflow with numbered steps
 4. Add templates and references in a `references/` subdirectory
-5. Wire it up to your AI coding tool using the instructions above
+5. Wire it up to your AI coding tools:
+   - **Claude Code**: Add a wrapper file in `.claude/commands/your-skill.md` with YAML frontmatter (`description`, `allowed-tools`) and a body that reads the SKILL.md
+   - **Cursor**: Add a command file in `.cursor/commands/your-skill.md` with a body that reads the SKILL.md
