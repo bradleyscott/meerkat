@@ -1,8 +1,8 @@
 # Why I built this
 
-Most AI tools for product managers help you write better PRDs or spin up prototypes. Almost none help you figure out whether you're building the right thing in the first place.
+Most AI tools for product managers help you write better PRDs or spin up prototypes. But few help you figure out whether you're building the right thing in the first place.
 
-That's the gap this project addresses.
+This project tries to close that gap.
 
 ## The context problem
 
