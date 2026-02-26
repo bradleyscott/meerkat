@@ -1,0 +1,26 @@
+{
+    "mcpServers": {
+        "mcp-atlassian": {
+            "command": "uvx",
+            "args": [
+                "mcp-atlassian"
+            ],
+            "env": {
+                "CONFLUENCE_URL": "https://your-org.atlassian.net/wiki/",
+                "CONFLUENCE_USERNAME": "you@example.com",
+                "CONFLUENCE_API_TOKEN": "your-confluence-api-token"
+            }
+        },
+        "slack": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "@modelcontextprotocol/server-slack"
+            ],
+            "env": {
+                "SLACK_BOT_TOKEN": "xoxb-your-slack-bot-token",
+                "SLACK_TEAM_ID": "your-slack-team-id"
+            }
+        }
+    }
+}

@@ -1,0 +1,71 @@
+# CLAUDE.md
+
+Operational guidance for AI coding assistants working in this repository. For user-facing documentation, see [README.md](README.md).
+
+## Company Directory
+
+Read `config.json` to get the `company_dir` value. Company data lives in these subdirectories:
+
+- `{company_dir}/company/` — Company research and analysis
+- `{company_dir}/company/context/` — Source documents (annual reports, strategy decks as PDFs)
+- `{company_dir}/competitors/` — Subdirectories for each competitor
+- `{company_dir}/product/` — OKRs, positioning, strategic roadmap, and vision documents
+- `{company_dir}/product/vision/` — Deeper explorations of individual strategic bets
+- `{company_dir}/industry/` — Industry landscape, curated sources, and monitoring digests
+- `{company_dir}/personas/users/` — User role persona files (one per persona)
+- `{company_dir}/personas/buyers/` — Buyer role persona files (one per persona)
+- `{company_dir}/role/` — Role-specific context and notes
+- `{company_dir}/outputs/` — Generated documents from skill runs
+
+Other key directories:
+
+- `skills/` — Reusable AI skill definitions (see skills/README.md)
+- `example/` — Demo content (Acme Anvils) showing the expected format for all document types
+
+Run `/onboard` to create the company directory and populate `config.json`.
+
+## Document Format
+
+### Competitor/Company Profiles
+
+YAML frontmatter with:
+
+- `company`: Company name
+- `website`: Main website URL
+- `feed_url`: Google Alerts RSS feed for monitoring
+- `linkedin`: LinkedIn company page URL
+- `confluence_title`: Title for Confluence page (if synced)
+- `confluence_url`: URL to corresponding Confluence page (if synced)
+
+### Internal Documents (OKRs, Strategy)
+
+YAML frontmatter with:
+
+- `title`: Document title
+- `period`: Time period (e.g., "H1 FY26")
+- `team`: Owning team
+- `confluence_title` and `confluence_url`: For wiki sync
+
+### Persona Documents
+
+YAML frontmatter with:
+
+- `persona`: Persona name
+- `type`: `user` or `buyer`
+- `confluence_title` and `confluence_url`: For wiki sync
+
+## Confluence Integration
+
+Documents sync to Confluence wiki using `/push-to-confluence path/to/file.md`, which creates or updates a page. On first use, you'll be prompted for your Confluence space key and parent page ID, which are saved to `config.json`.
+
+Relative links between markdown files are automatically converted to Confluence URLs when pushing.
+
+## Content Guidelines
+
+When updating research files:
+
+- Use markdown tables for structured data comparisons
+- Include source links at the bottom of documents
+- Date-stamp significant updates in the executive summary
+- Financial figures should specify currency
+- Maintain sections per the templates in skills/*/references/

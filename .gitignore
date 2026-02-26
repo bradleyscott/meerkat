@@ -1,0 +1,17 @@
+# OS files
+.DS_Store
+
+# User-specific configuration
+.mcp.json
+.claude/settings.local.json
+config.json
+
+# Personal context (AI voice training)
+me/
+
+# Generated outputs from skill runs
+**/outputs/
+
+# Company-specific data directories
+# /onboard appends your directory name here automatically
+gentrack/
