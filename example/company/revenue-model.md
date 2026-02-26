@@ -4,7 +4,7 @@ confluence_title:
 confluence_url:
 ---
 
-# Acme Anvils Corp — Revenue Model
+# Revenue Model
 
 ## Revenue Streams
 

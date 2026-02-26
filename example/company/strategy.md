@@ -4,7 +4,7 @@ confluence_title:
 confluence_url:
 ---
 
-# Acme Anvils Corp — Strategic Direction
+# Strategic Direction
 
 ## Vision
 

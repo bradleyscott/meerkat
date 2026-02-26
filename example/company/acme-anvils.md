@@ -7,7 +7,7 @@ confluence_title:
 confluence_url:
 ---
 
-# Acme Anvils Corp (TOON: ACME)
+# Acme Anvils Corp
 
 ## Company Overview
 
