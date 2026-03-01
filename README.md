@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="brand/logo.svg" alt="Meerkat" width="200">
+  <img src="https://raw.githubusercontent.com/bradleyscott/meerkat-www/main/brand/logo.svg" alt="Meerkat" width="200">
 </p>
 
 <h1 align="center">Meerkat</h1>
