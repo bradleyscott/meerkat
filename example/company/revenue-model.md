@@ -1,7 +1,7 @@
 ---
 title: Revenue Model
-confluence_title:
-confluence_url:
+wiki_title:
+wiki_url:
 ---
 
 # Revenue Model

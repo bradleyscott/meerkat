@@ -94,7 +94,7 @@ git pull origin main
 
 ## Integrations
 
-**Confluence** — Sync documents to and from your wiki with `/push-to-confluence` and `/pull-from-confluence`. Requires the [mcp-atlassian](https://github.com/sooperset/mcp-atlassian) MCP server.
+**Wiki sync** — Sync documents to and from Confluence or Notion with `/push` and `/pull`. The platform is auto-detected. Confluence requires the [mcp-atlassian](https://github.com/sooperset/mcp-atlassian) MCP server; Notion uses the hosted MCP server with OAuth.
 
 **Slack** — The monitoring skills (`/monitor-competitors`, `/monitor-industry`) can post updates to Slack channels via the [Slack MCP server](https://docs.slack.dev/ai/slack-mcp-server/).
 

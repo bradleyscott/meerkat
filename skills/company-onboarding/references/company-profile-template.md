@@ -10,8 +10,8 @@ company: {Full Company Name}
 website: {URL}
 feed_url:
 linkedin: {LinkedIn company URL}
-confluence_title:
-confluence_url:
+wiki_title:
+wiki_url:
 ---
 ```
 

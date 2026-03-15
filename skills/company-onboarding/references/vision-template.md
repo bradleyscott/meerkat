@@ -7,8 +7,8 @@ Use this template for a deeper exploration of a specific strategic bet. Each vis
 ```yaml
 ---
 title: "Vision: {Name of Strategic Bet}"
-confluence_title:
-confluence_url:
+wiki_title:
+wiki_url:
 ---
 ```
 

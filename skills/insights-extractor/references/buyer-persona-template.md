@@ -1,8 +1,8 @@
 ---
 persona: "[Persona Name]"
 type: buyer
-confluence_title:
-confluence_url:
+wiki_title:
+wiki_url:
 ---
 
 # [Persona Name]

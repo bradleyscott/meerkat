@@ -6,8 +6,8 @@ linkedin: https://www.linkedin.com/company/roadrunner-systems
 twitter:
 subreddit: r/roadrunnersystems
 feed_url:
-confluence_title:
-confluence_url:
+wiki_title:
+wiki_url:
 ---
 
 # Roadrunner Systems

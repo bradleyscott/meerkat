@@ -7,8 +7,8 @@ Use this template to structure the revenue model document. This captures how the
 ```yaml
 ---
 title: Revenue Model
-confluence_title:
-confluence_url:
+wiki_title:
+wiki_url:
 ---
 ```
 

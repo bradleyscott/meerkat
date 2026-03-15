@@ -41,8 +41,8 @@ Product documents use YAML frontmatter:
 title: OKRs
 period: H1 FY26
 team: Product Development
-confluence_title:
-confluence_url:
+wiki_title:
+wiki_url:
 ---
 ```
 
@@ -51,8 +51,8 @@ Vision documents follow the same pattern:
 ```yaml
 ---
 title: "Vision: AI-Powered Predictive Targeting"
-confluence_title:
-confluence_url:
+wiki_title:
+wiki_url:
 ---
 ```
 

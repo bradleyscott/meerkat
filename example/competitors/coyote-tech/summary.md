@@ -6,8 +6,8 @@ linkedin: https://www.linkedin.com/company/coyote-tech
 twitter: https://twitter.com/coyotetech
 subreddit:
 feed_url:
-confluence_title:
-confluence_url:
+wiki_title:
+wiki_url:
 ---
 
 # Coyote Tech

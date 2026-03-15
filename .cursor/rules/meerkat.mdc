@@ -39,8 +39,8 @@ YAML frontmatter with:
 - `website`: Main website URL
 - `feed_url`: Google Alerts RSS feed for monitoring
 - `linkedin`: LinkedIn company page URL
-- `confluence_title`: Title for Confluence page (if synced)
-- `confluence_url`: URL to corresponding Confluence page (if synced)
+- `wiki_title`: Title for wiki page (if synced)
+- `wiki_url`: URL to corresponding wiki page (if synced)
 
 ### Internal Documents (OKRs, Strategy)
 
@@ -49,7 +49,7 @@ YAML frontmatter with:
 - `title`: Document title
 - `period`: Time period (e.g., "H1 FY26")
 - `team`: Owning team
-- `confluence_title` and `confluence_url`: For wiki sync
+- `wiki_title` and `wiki_url`: For wiki sync
 
 ### Persona Documents
 
@@ -57,13 +57,13 @@ YAML frontmatter with:
 
 - `persona`: Persona name
 - `type`: `user` or `buyer`
-- `confluence_title` and `confluence_url`: For wiki sync
+- `wiki_title` and `wiki_url`: For wiki sync
 
-## Confluence Integration
+## Wiki Integration
 
-Documents sync to Confluence wiki using `/push-to-confluence path/to/file.md`, which creates or updates a page. On first use, you'll be prompted for your Confluence space key and parent page ID, which are saved to `config.json`.
+Documents sync to Confluence or Notion using `/push path/to/file.md` and `/pull path/to/file.md`. The platform is auto-detected from the `wiki_url` domain in frontmatter, or from `config.json` settings. On first use, you'll be prompted for platform-specific configuration (saved to `config.json`).
 
-Relative links between markdown files are automatically converted to Confluence URLs when pushing.
+Relative links between markdown files are automatically converted to wiki URLs when pushing.
 
 ## Content Guidelines
 

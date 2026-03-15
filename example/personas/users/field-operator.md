@@ -1,8 +1,8 @@
 ---
 persona: "Field Operations Specialist"
 type: user
-confluence_title:
-confluence_url:
+wiki_title:
+wiki_url:
 ---
 
 # Field Operations Specialist

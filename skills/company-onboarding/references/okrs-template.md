@@ -9,8 +9,8 @@ Use this template to structure OKRs. Each objective follows a consistent format.
 title: OKRs
 period: {e.g., H1 FY26}
 team: {Owning team name}
-confluence_title:
-confluence_url:
+wiki_title:
+wiki_url:
 ---
 ```
 

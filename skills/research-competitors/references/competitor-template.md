@@ -6,8 +6,8 @@ linkedin:
 twitter:
 subreddit:
 feed_url:
-confluence_title:
-confluence_url:
+wiki_title:
+wiki_url:
 ---
 
 # {Company Name}

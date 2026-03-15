@@ -75,7 +75,7 @@ research-competitors → monitor-competitors (scheduled)
 - **monitor-competitors** is autonomous — it runs without user interaction, typically on a weekly schedule
 - Both skills reference the same competitor profile template and output to the `{company_dir}/competitors/` directory
 - Monitor uses Google Alerts RSS feeds (`feed_url` in frontmatter) as its primary signal source
-- Slack posting (via Slack MCP) and Confluence sync are optional but recommended for the monitoring skill
+- Slack posting (via Slack MCP) and wiki sync are optional but recommended for the monitoring skill
 
 ### Industry Intelligence
 
@@ -96,6 +96,18 @@ research-industry-sources → monitor-industry (scheduled)
 - Uses the same urgency tier system (Act Now / Discuss / FYI) as competitor monitoring for consistency
 - Explicit deduplication against competitor monitoring — industry-level developments belong here, competitor-specific ones don't
 - Designed to run on the same schedule as competitor monitoring (weekly or fortnightly)
+
+### Wiki Sync
+
+Bidirectional sync between local markdown files and wiki platforms (Confluence, Notion):
+
+| Skill | Purpose | Input | Output |
+| --- | --- | --- | --- |
+| **wiki-sync** | Push/pull markdown files to/from Confluence or Notion | `/push path/to/file.md` or `/pull path/to/file.md` | Updated wiki page or local file |
+
+- Platform is auto-detected from the `wiki_url` domain in frontmatter, or from `config.json` settings
+- Relative links between markdown files are automatically converted to wiki URLs when pushing, and back to relative paths when pulling
+- Platform-specific logic lives in `skills/wiki-sync/push-{platform}.md` and `pull-{platform}.md`
 
 ## Skill Structure
 
@@ -133,11 +145,13 @@ This repo ships with pre-configured commands in `.cursor/commands/` and project 
 
 Type `/` in the Cursor Agent input to see all available commands.
 
-**MCP servers** (for Confluence and Slack integrations): copy the example config to `.cursor/mcp.json` and fill in your credentials:
+**MCP servers** (for Confluence, Notion, and Slack integrations): copy the example config to `.cursor/mcp.json` and fill in your credentials:
 
 ```bash
 cp .mcp.json.example .cursor/mcp.json
 ```
+
+The Notion MCP server uses OAuth (no API tokens needed) — you'll authenticate via browser on first use.
 
 ### Amazon Q Developer CLI
 

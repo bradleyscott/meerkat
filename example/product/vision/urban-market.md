@@ -1,7 +1,7 @@
 ---
 title: "Vision: Urban Pest Control Market Entry"
-confluence_title:
-confluence_url:
+wiki_title:
+wiki_url:
 ---
 
 # Vision: Urban Pest Control Market Entry

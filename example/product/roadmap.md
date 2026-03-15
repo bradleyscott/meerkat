@@ -2,8 +2,8 @@
 title: Strategic Roadmap
 period: FY26
 team: AnvilOS Platform
-confluence_title:
-confluence_url:
+wiki_title:
+wiki_url:
 ---
 
 # AnvilOS Platform — Strategic Roadmap

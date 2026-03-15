@@ -2,8 +2,8 @@
 title: OKRs
 period: H1 FY26
 team: Product Development
-confluence_title:
-confluence_url:
+wiki_title:
+wiki_url:
 ---
 
 ## Objective 1: Launch AnvilOS 2.0 Platform
