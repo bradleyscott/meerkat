@@ -92,7 +92,7 @@ git pull origin main
 | `context/personas/` | No | User and buyer role personas |
 | `context/industry/` | No | Industry landscape and monitoring digests |
 | `context/role/` | No | Your role-specific context |
-| `context/outputs/` | No | Generated documents from skill runs |
+| `outputs/` | No | Generated documents from skill runs |
 
 ## Integrations
 

@@ -115,7 +115,7 @@ If the PM prefers to address gaps on their own, that's fine — the assessment i
 
 ### Step 7: Save assessment
 
-Save the readiness assessment as `readiness-check.md` in the same folder as the opportunity document (e.g., `context/outputs/opportunities/{slug}/readiness-check.md`). If no opportunity folder exists, ask the PM where to save it.
+Save the readiness assessment as `readiness-check.md` in the same folder as the opportunity document (e.g., `outputs/opportunities/{slug}/readiness-check.md`). If no opportunity folder exists, ask the PM where to save it.
 
 Use this frontmatter:
 

@@ -109,7 +109,7 @@ For each recommendation, specify:
 
 Read the [validation plan template](references/validation-plan-template.md) and use it to write the validation plan document.
 
-**Save location:** If the assumptions document is inside an opportunity folder (e.g., `context/outputs/opportunities/some-idea/assumptions.md`), save as `validation-plan.md` in the same folder. Otherwise, ask the user where to save it.
+**Save location:** If the assumptions document is inside an opportunity folder (e.g., `outputs/opportunities/some-idea/assumptions.md`), save as `validation-plan.md` in the same folder. Otherwise, ask the user where to save it.
 
 **Next steps:** After saving, tell the PM: "Run your discovery experiments. When you have interview transcripts or research findings, run `/synthesise-research` to extract insights and check them against your assumptions."
 

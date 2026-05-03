@@ -246,7 +246,7 @@ Read the output templates from the references directory:
 - [Individual analysis template](references/individual-analysis-template.md)
 - [Synthesis template](references/synthesis-template.md)
 
-**Save location:** Create a folder under `context/outputs/insights/` named with a descriptive slug (e.g., `context/outputs/insights/2026-02-billing-interviews/`). Ask the PM to confirm the folder name before creating it.
+**Save location:** Create a folder under `outputs/insights/` named with a descriptive slug (e.g., `outputs/insights/2026-02-billing-interviews/`). Ask the PM to confirm the folder name before creating it.
 
 Save individual analyses as `{participant-id}-analysis.md` and the synthesis (if multiple transcripts) as `synthesis.md`.
 
