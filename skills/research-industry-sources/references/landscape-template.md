@@ -2,8 +2,9 @@
 title: Industry Landscape
 industry:
 date_researched:
-wiki_title:
-wiki_url:
+slack_channel:
+source_title:
+source_url:
 ---
 
 # {Industry} — Industry Landscape
@@ -89,7 +90,6 @@ wiki_url:
 | Setting | Value |
 |---------|-------|
 | Recommended cadence | <!-- Weekly / Fortnightly --> |
-| Slack channel | <!-- #industry-intel or #competitive-intel --> |
 | Last monitored | <!-- Updated by monitor-industry skill --> |
 
 ## Sources

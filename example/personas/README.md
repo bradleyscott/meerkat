@@ -35,8 +35,8 @@ Persona documents use YAML frontmatter:
 ---
 persona: "Field Operations Specialist"
 type: user
-wiki_title:
-wiki_url:
+source_title:
+source_url:
 ---
 ```
 

@@ -6,7 +6,7 @@ Each skill is a structured prompt that guides an AI coding assistant through a s
 
 ## Company Directory Convention
 
-Skills find your company data via `config.json` (created by `/onboard`). An example is provided at `config.json.example` — copy it and run `/onboard` to populate it, or edit it manually. See the [root README](../README.md#quick-start) for setup instructions.
+Skills find your company data in the `context/` directory at the repo root (created by `/onboard`). See the [root README](../README.md#quick-start) for setup instructions.
 
 ## Available Skills
 
@@ -105,7 +105,7 @@ Bidirectional sync between local markdown files and wiki platforms (Confluence, 
 | --- | --- | --- | --- |
 | **source-sync** | Push/pull markdown files to/from Confluence or Notion | `/push path/to/file.md` or `/pull path/to/file.md` | Updated source page or local file |
 
-- Platform is auto-detected from the `source_url` domain in frontmatter, or from `config.json` settings
+- Platform is auto-detected from the `source_url` domain in frontmatter
 - Relative links between markdown files are automatically converted to source URLs when pushing, and back to relative paths when pulling
 - Platform-specific logic lives in `skills/source-sync/push-{platform}.md` and `pull-{platform}.md`
 

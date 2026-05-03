@@ -43,8 +43,8 @@ linkedin: https://www.linkedin.com/company/competitor
 twitter: https://twitter.com/competitor
 subreddit:
 feed_url:
-wiki_title:
-wiki_url:
+source_title:
+source_url:
 ---
 ```
 

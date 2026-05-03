@@ -9,8 +9,8 @@ Use this template for a strategic roadmap. The roadmap should be one integrated 
 title: Strategic Roadmap
 period: {e.g., FY26}
 team: {Owning team name}
-wiki_title:
-wiki_url:
+source_title:
+source_url:
 ---
 ```
 

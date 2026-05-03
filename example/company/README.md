@@ -19,8 +19,8 @@ company: Your Company Name
 website: https://www.example.com
 feed_url:
 linkedin: https://www.linkedin.com/company/your-company
-wiki_title:
-wiki_url:
+source_title:
+source_url:
 ---
 ```
 
@@ -29,8 +29,8 @@ Strategy and revenue model files use document frontmatter:
 ```yaml
 ---
 title: Revenue Model
-wiki_title:
-wiki_url:
+source_title:
+source_url:
 ---
 ```
 

@@ -1,8 +1,8 @@
 ---
 persona: "[Persona Name]"
 type: user
-wiki_title:
-wiki_url:
+source_title:
+source_url:
 ---
 
 # [Persona Name]

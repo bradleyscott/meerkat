@@ -1,8 +1,8 @@
 # Pull from Notion
 
 Platform-specific pull instructions for Notion. Called by the `/pull` router command, which has already:
-- Read the file and parsed frontmatter (`wiki_url` required)
-- Detected the platform as Notion from the `wiki_url` domain
+- Read the file and parsed frontmatter (`source_url` required)
+- Detected the platform as Notion from the `source_url` domain
 
 ## Steps
 
@@ -18,8 +18,8 @@ Platform-specific pull instructions for Notion. Called by the `/pull` router com
    - If the user says yes, perform the conversion:
      a. Build a reverse lookup map by scanning all markdown files in the repository:
         - Use Glob to find all `**/*.md` files
-        - Read each file's frontmatter to extract `wiki_url`
-        - Build a map: `wiki_url` → `file_path`
+        - Read each file's frontmatter to extract `source_url`
+        - Build a map: `source_url` → `file_path`
      b. Scan the pulled content for Notion page URLs matching patterns like:
         - `https://www.notion.so/...`
         - `https://notion.so/...`

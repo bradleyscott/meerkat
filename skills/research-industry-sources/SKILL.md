@@ -34,11 +34,11 @@ Research Progress:
 
 ### Step 1: Load context
 
-Read `config.json` at the project root to get the `company_dir` value (e.g., `acme`). Then read the business context to understand the industry landscape:
+Read the business context to understand the industry landscape:
 
-- `{company_dir}/company` — company overview, strategy, revenue model, market, customers
-- `{company_dir}/product` — product positioning, roadmap, OKRs, vision documents
-- `{company_dir}/competitors` — existing competitor profiles (to understand the competitive landscape and avoid overlapping with competitor-specific monitoring)
+- `context/company` — company overview, strategy, revenue model, market, customers
+- `context/product` — product positioning, roadmap, OKRs, vision documents
+- `context/competitors` — existing competitor profiles (to understand the competitive landscape and avoid overlapping with competitor-specific monitoring)
 
 Pay particular attention to:
 
@@ -131,7 +131,7 @@ While validating, extract any immediately useful insights from recent content. T
 
 Read the [landscape template](references/landscape-template.md) and use it to write the industry landscape document.
 
-**Save location:** `{company_dir}/industry/landscape.md`
+**Save location:** `context/industry/landscape.md`
 
 **Content guidance:**
 

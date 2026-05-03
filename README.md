@@ -59,12 +59,11 @@ Browse the [example content](example/) (a fictional company called Acme Anvils) 
 ```bash
 git clone <repo-url> my-pm-context
 cd my-pm-context
-cp config.json.example config.json
 ```
 
 Then in [Claude Code](https://claude.ai/code) or [Cursor](https://cursor.com):
 
-1. Run `/onboard` — a guided conversation that captures your company, product, and role context, then builds your workspace (this populates `config.json` for you)
+1. Run `/onboard` — a guided conversation that captures your company, product, and role context, then builds your workspace
 2. Run `/opportunity-interview` to explore your first product idea
 3. Run `/research-competitors` to profile a key competitor
 
@@ -84,17 +83,17 @@ git pull origin main
 |-----------|---------|---------|
 | `skills/` | Yes | Reusable skill definitions ([full reference](skills/README.md)) |
 | `example/` | Yes | Demo content (Acme Anvils) |
-| `{your-company}/company/` | No | Your company research and context |
-| `{your-company}/competitors/` | No | Your competitor profiles |
-| `{your-company}/product/` | No | OKRs, positioning, roadmap, and vision documents |
-| `{your-company}/personas/` | No | User and buyer role personas |
-| `{your-company}/industry/` | No | Industry landscape and monitoring digests |
-| `{your-company}/role/` | No | Your role-specific context |
-| `{your-company}/outputs/` | No | Generated documents from skill runs |
+| `context/company/` | No | Your company research and context |
+| `context/competitors/` | No | Your competitor profiles |
+| `context/product/` | No | OKRs, positioning, roadmap, and vision documents |
+| `context/personas/` | No | User and buyer role personas |
+| `context/industry/` | No | Industry landscape and monitoring digests |
+| `context/role/` | No | Your role-specific context |
+| `context/outputs/` | No | Generated documents from skill runs |
 
 ## Integrations
 
-**Wiki sync** — Sync documents to and from Confluence or Notion with `/push` and `/pull`. The platform is auto-detected. Confluence requires the [mcp-atlassian](https://github.com/sooperset/mcp-atlassian) MCP server; Notion uses the hosted MCP server with OAuth.
+**Source sync** — Sync documents to and from Confluence or Notion with `/push` and `/pull`. The platform is auto-detected from the `source_url` in each file's frontmatter. Confluence requires the [mcp-atlassian](https://github.com/sooperset/mcp-atlassian) MCP server; Notion uses the hosted MCP server with OAuth.
 
 **Slack** — The monitoring skills (`/monitor-competitors`, `/monitor-industry`) can post updates to Slack channels via the [Slack MCP server](https://docs.slack.dev/ai/slack-mcp-server/).
 
@@ -108,7 +107,7 @@ cp .mcp.json.example .mcp.json
 cp .mcp.json.example .cursor/mcp.json
 ```
 
-All config files (`config.json`, `.mcp.json`, `.cursor/mcp.json`) are gitignored — your credentials stay local.
+All config files (`.mcp.json`, `.cursor/mcp.json`) are gitignored — your credentials stay local.
 
 ## Extending
 

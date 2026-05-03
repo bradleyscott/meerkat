@@ -1,12 +1,12 @@
 # Pull from Confluence
 
 Platform-specific pull instructions for Confluence. Called by the `/pull` router command, which has already:
-- Read the file and parsed frontmatter (`wiki_url` required)
-- Detected the platform as Confluence from the `wiki_url` domain
+- Read the file and parsed frontmatter (`source_url` required)
+- Detected the platform as Confluence from the `source_url` domain
 
 ## Steps
 
-1. Extract the page ID from the `wiki_url`. The URL format is typically:
+1. Extract the page ID from the `source_url`. The URL format is typically:
    - `https://<domain>.atlassian.net/wiki/x/<shortcode>` - use the shortcode as the page_id
    - `https://<domain>.atlassian.net/wiki/spaces/<space>/pages/<page_id>/<title>` - use the page_id
 
@@ -24,8 +24,8 @@ Platform-specific pull instructions for Confluence. Called by the `/pull` router
    - If the user says yes, perform the conversion:
      a. Build a reverse lookup map by scanning all markdown files in the repository:
         - Use Glob to find all `**/*.md` files
-        - Read each file's frontmatter to extract `wiki_url`
-        - Build a map: `wiki_url` → `file_path`
+        - Read each file's frontmatter to extract `source_url`
+        - Build a map: `source_url` → `file_path`
      b. Scan the pulled content for Confluence page URLs matching patterns:
         - `https://<domain>.atlassian.net/wiki/spaces/.../pages/{pageId}/...`
         - `https://<domain>.atlassian.net/wiki/x/{shortcode}`

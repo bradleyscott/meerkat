@@ -17,10 +17,10 @@ This skill runs autonomously without user interaction. Do not prompt for confirm
 
 Before first run, ensure the following are set up:
 
-- **Competitor profiles** exist in `{company_dir}/competitors` with populated frontmatter (at minimum `website` and `company` fields). The company directory name is read from the `company_dir` field in `config.json` at the project root
+- **Competitor profiles** exist in `context/competitors` with populated frontmatter (at minimum `website` and `company` fields). The company directory name is read from the `context/` directory at the repo root
 - **Google Alerts RSS feeds** are configured for each competitor and the `feed_url` field is populated in their frontmatter — this is the primary monitoring signal
 - **Slack MCP** is configured if Slack posting is desired (see Setup section below). If Slack is not configured, the skill still functions — it updates competitor files and outputs a summary to the console
-- **Slack channel** — set the target channel in the `slack.competitive_intel_channel` field in `config.json` at the project root
+- **Slack channel** — set the `slack_channel` field in `context/competitors/_monitoring.md` frontmatter (e.g. `slack_channel: "#competitive-intel"`). If the file or field is absent, Slack posting is skipped silently
 - **Slack channel per competitor** — optionally set `slack_channel` in a competitor's frontmatter (e.g. `slack_channel: "#comp-coyote-tech"`) OR add a `Slack channel` row to the Sources table in the document body. The skill will find it in either location and read it for internal competitive signals
 
 ## Urgency Tiers
@@ -74,11 +74,11 @@ Monitoring Progress:
 
 ### Step 1: Load context
 
-Read `config.json` at the project root to get the `company_dir` value (e.g., `acme`). Then read the business context to ground your strategic assessments:
+Read the business context to ground your strategic assessments:
 
-- `{company_dir}/company` — company overview, strategy, current priorities
-- `{company_dir}/product` — product positioning, roadmap, OKRs
-- `{company_dir}/competitors` — all existing competitor profiles (read every `summary.md`)
+- `context/company` — company overview, strategy, current priorities
+- `context/product` — product positioning, roadmap, OKRs
+- `context/competitors` — all existing competitor profiles (read every `summary.md`)
 
 From the competitor profiles, extract:
 - The list of competitors to monitor
@@ -192,7 +192,7 @@ Read the [Slack update template](references/slack-update-template.md) and compos
 - Include Act Now and Discuss items only — mention FYI count at the bottom for completeness
 - Use the standardised **event categories** from the template for scannable headlines
 
-Post to the channel specified in the `slack.competitive_intel_channel` field in `config.json`. Use the Slack MCP to send the message.
+Post to the channel specified in the `slack_channel` field of `context/competitors/_monitoring.md`. Use the Slack MCP to send the message.
 
 **Slack message quality bar:**
 
@@ -239,7 +239,7 @@ The Slack MCP server enables posting competitive intelligence updates to a Slack
 
 1. Follow the setup instructions at https://docs.slack.dev/ai/slack-mcp-server/
 2. Ensure the MCP server has permission to post messages to the target channel
-3. Set the `slack.competitive_intel_channel` field in `config.json` to match your channel name or ID
+3. Set the `slack_channel` field in `context/competitors/_monitoring.md` frontmatter to your channel name or ID
 
 If the Slack MCP is not available, the skill operates normally — it updates competitor files and outputs a summary to the console. Slack posting is simply skipped.
 
