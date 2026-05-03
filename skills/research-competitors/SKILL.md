@@ -65,6 +65,7 @@ Identify the most relevant sources for this specific competitor. Don't follow a 
 - LinkedIn company page → `linkedin`
 - Twitter/X account → `twitter`
 - Dedicated subreddit (if one exists) → `subreddit`
+- Internal Slack channel for this competitor (if one exists) → `slack_channel`
 
 **Then assess which of these are relevant based on the competitor's domain:**
 
@@ -130,7 +131,9 @@ Read the [competitor template](references/competitor-template.md) and use it to 
 - Lead with facts, not opinions
 - Use tables for structured data — they're scannable and comparable across competitor files
 - Include specific numbers where available (revenue, customers, employees, funding)
-- Date-stamp the executive summary with the research date
+- Populate the **TL;DR** callout and the **Last updated / Next refresh due** metadata at the top of the file
+- Prefix each Recent Developments source with a confidence indicator: ✅ Verified (confirmed public source), 💬 Anecdotal (field intel, unverified), 🔍 Inferred (logical conclusion)
+- Add the confidence legend to the bottom of the Sources section
 - Every claim should be traceable to a source in the Sources section
 - Match the structure and depth of existing competitor profiles in the repository for consistency
 
@@ -140,8 +143,9 @@ This section is particularly valuable for sales enablement and roadmap decisions
 
 1. Describe what the competitor offers (based on evidence, not just marketing claims)
 2. Describe our corresponding capability
-3. Assess using: 🟢 We lead / 🟡 Comparable / 🔴 They lead / ⚪ Unknown
-4. If you lack evidence about either side, mark ⚪ and note it — don't guess
+3. Add a **Customer impact** column — one sentence on what this difference means for a buyer's actual decision. This is the "so what" that helps sales use the comparison in a live deal
+4. Assess using: 🟢 We lead / 🟡 Comparable / 🔴 They lead / ⚪ Unknown
+5. If you lack evidence about either side, mark ⚪ and note it — don't guess
 
 Base feature areas on what comes up in competitive deals and what's strategically important. Use the product positioning and roadmap context from Step 1 to identify the right comparison dimensions.
 
@@ -154,9 +158,9 @@ Using the context loaded in Step 1 (company strategy, product positioning, OKRs)
 - **Threat level** (High / Medium / Low) with clear justification
 - **Where they win** — specific deal types, geographies, or customer segments where this competitor has an advantage
 - **Where we win** — specific scenarios where we have the advantage
-- **Positioning implications** — how this competitor should influence our messaging and sales narratives
+- **Positioning in a live deal** — the single most important framing shift when competing against them. State the core reframe in one sentence, then 2–3 supporting points a salesperson can use when the buyer pushes back
 - **Roadmap implications** — whether any of their capabilities suggest investments we should consider or accelerate
-- **Key watch areas** — what developments from this competitor would materially change the competitive dynamic
+- **Key watch areas** — what developments from this competitor would materially change the competitive dynamic. Flag the highest-risk signals with 🚩
 
 Be specific and actionable. "They're a strong competitor" is useless. "They win on implementation speed for mid-market utilities in the UK, but lack DER capabilities which is our key differentiator in the Australian market" is useful.
 

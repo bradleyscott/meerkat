@@ -6,68 +6,110 @@ linkedin: https://www.linkedin.com/company/coyote-tech
 twitter: https://twitter.com/coyotetech
 subreddit:
 feed_url:
+slack_channel:
+refresh_due: 2026-03-01
 wiki_title:
 wiki_url:
 ---
 
 # Coyote Tech
 
-## Executive Summary
+> **Threat level: Medium** | AI-powered autonomous drone competitor
 
-Coyote Tech is a venture-backed startup building AI-powered autonomous hunting drones, positioned as the disruptive alternative to traditional hardware-based predator solutions. Founded in 2021 in San Francisco with $125M in total funding (Series C at $75M in 2025), Coyote Tech has grown to 200 employees and is aggressively targeting Acme's core market with a "no anvils needed" narrative.
+**Last updated:** 2026-02-01
 
-Despite rapid growth and strong VC backing, the company's core product has serious reliability problems — particularly in desert canyon environments where GPS signals are unreliable and thermal updrafts cause targeting failures. Their autonomous drones achieve only a 12% successful capture rate in field conditions, compared to Acme's 18% with AnvilOS-guided traditional methods.
+---
 
-*Last researched: 2026-02-01*
+> **TL;DR**
+> - **What:** VC-backed startup ($125M raised, Series C at $400M valuation) building AI-powered autonomous hunting drones. Positioned as the disruptive alternative to traditional hardware with a "no anvils needed" narrative. 200 employees.
+> - **Where they lead:** Urban pest control, autonomous operation, and deployment speed — genuine advantages in their niche.
+> - **Key threat:** Canyon Mode (GPS-denied navigation, beta) is their attempt to solve the desert reliability problem. If they crack it, our core market advantage narrows significantly.
+> - **Key advantage:** We lead on reliability in real field conditions (18% vs 12% capture rate), proven product suite breadth, and the ability to operate in any terrain without GPS.
 
-## Overview
+---
 
-### Key Facts
+## 🎯 Strategic Assessment
 
-| Attribute | Detail |
-|-----------|--------|
-| Founded | 2021 |
-| Headquarters | San Francisco, CA |
-| Employees | 200 |
-| Ownership | VC-backed (Series C) |
-| Global Presence | San Francisco (HQ), Austin (engineering), Tel Aviv (AI research) |
+Coyote Tech represents a genuine long-term threat through the autonomous/AI narrative, but their near-term product reliability problems and funding dependency limit their ability to displace Acme in core markets today. The threat escalates to High if they solve the desert reliability problem (Canyon Mode to watch) or establish a dominant position in urban pest control and expand from there.
 
-### Leadership
+### Where They Win
 
-| Role | Name | Background |
-|------|------|------------|
-| CEO & Co-founder | Chase Wiley | Ex-DJI product lead; Stanford CS |
-| CTO & Co-founder | Dr. Astra Falcon | Former Google DeepMind researcher; PhD in computer vision |
-| VP Sales | Dash Runner | Ex-Acme enterprise sales director (departed 2023) |
+- **Urban pest control** — drones significantly outperform traditional hardware in dense urban environments
+- **"Innovation narrative" buyers** — customers who want to be seen as forward-thinking and are willing to tolerate lower reliability for the autonomy story
+- **Fast deployment scenarios** — when speed of deployment matters more than success rate
+- **Clients burned by Acme failures** — ex-Acme VP Sales Dash Runner is specifically targeting dissatisfied Acme customers
 
-## Funding
+### Where We Win
 
-### Ownership Structure
+- **Desert and canyon operations** — our core market, where Coyote's drones fundamentally struggle with GPS and thermal issues
+- **Reliability-sensitive clients** — customers who need proven capture rates, not promising demos
+- **Enterprise complexity** — clients needing a full suite (anvils + catapults + explosives + software) can't get that from Coyote Tech
+- **Budget-conscious buyers** — AnvilOS subscription is significantly cheaper than a drone fleet
+- **Regulated environments** — our OSHA track record far exceeds their drone safety record
 
-VC-backed, private. No public listing planned before 2028 per CEO statements.
+### Positioning in a Live Deal
 
-### Funding History
+When competing against Coyote Tech, the framing that matters:
 
-| Round | Date | Amount | Investor(s) | Valuation |
-|-------|------|--------|-------------|-----------|
-| Seed | Q2 2021 | $5M | Desert Ventures, Y Combinator | $20M |
-| Series A | Q1 2022 | $15M | Roadside Ventures, Sequoia Scout | $60M |
-| Series B | Q3 2023 | $30M | Roadside Ventures (lead), Tiger Global | $150M |
-| Series C | Q1 2025 | $75M | SoftBank Vision Fund, Roadside Ventures | $400M |
+**Autonomy means nothing if it doesn't work. Our 18% success rate in real desert conditions beats their 12% — even without a drone.**
 
-Total funding: $125M.
+Supporting points:
+- Their Canyon Mode is in beta — they haven't solved GPS-denied navigation yet; we operate in every terrain today
+- A drone fleet at $15K–$45K/unit plus platform fees is 10x the cost of AnvilOS — for lower capture rates in the field
+- When a drone fails at 45 minutes, there's no fallback. With Acme, you have a full suite of options
 
-## Financials
+### 🗺️ Roadmap Implications
 
-| Metric | Value | Source |
-|--------|-------|--------|
-| Revenue | ~$18M ARR (estimated) | Industry sources |
-| Growth Rate | ~120% YoY | CEO interview, TechCrunch |
-| Profitability | Not profitable; ~$40M annual burn rate | Estimated from headcount and funding cadence |
-| Customer Count | 45 | Company website |
-| ARR / ACV | ~$400K average | Derived from revenue / customer count |
+- **AI investment acceleration** — close the autonomy perception gap with AnvilOS v3.0 before Canyon Mode matures
+- **Urban product development** — our weakness in urban environments is real and growing; consider a lightweight offering or partnership
+- **Canyon Mode watch** — if they achieve >20% success rate in desert conditions, threat level moves to High and we need a direct response
 
-## Products
+### 👀 Key Watch Areas
+
+- 🚩 **Canyon Mode reliability data** — if published field results show >20% success rate in desert conditions, threat level moves to High
+- **Next funding round** — at ~$40M burn rate they need Series D by mid-2027; funding pressure = potential customer concessions we can exploit
+- **Dash Runner's impact** — watch for enterprise client defections in the 6–12 months following his hire
+- **Urban market traction** — if they establish dominance in urban pest control ($2B TAM), they'll have revenue to fund desert R&D
+
+---
+
+## 🔑 Value Driver Assessment
+
+| Value driver | Their approach | Assessment | Key implication for deals |
+|-------------|---------------|------------|---------------------------|
+| **Reliable precision targeting** | AI-powered autonomous drones; 12% field capture rate; GPS-dependent (fails in canyons) | 🔴 Weak | Lead with our 18% vs their 12% success rate in real field conditions. Ask them for field data, not demo results. |
+| **Full product suite** | Drones only — no hardware fallback when drones fail or battery runs out | 🔴 Weak | "When your drone fails at 45 minutes, what's Plan B?" Acme offers anvils, catapults, explosives, and software in one relationship. |
+| **Open-terrain operations** | GPS dependency fails in canyons and desert; 45-minute battery limits range | 🟡 Partial | Directly relevant in desert/canyon accounts. Ask them to demo Canyon Mode in actual terrain before the deal closes. |
+| **Cost of ownership** | Hardware $15K–$45K/unit + $3K–$8K/month platform + 20% annual maintenance | 🔴 Weak | Coyote Tech is significantly more expensive for comparable — or worse — capture rates. Total cost of ownership is a strong lever in budget-sensitive deals. |
+
+---
+
+## 🕐 Recent Developments
+
+| Date | Development | Source |
+|------|-------------|--------|
+| Jan 2026 | Announced "Canyon Mode" — new GPS-denied navigation capability (beta) | ✅ Company blog |
+| Q1 2025 | Series C at $400M valuation; SoftBank Vision Fund leads | ✅ TechCrunch |
+| Q4 2024 | Hired Dash Runner (ex-Acme VP Sales) to lead enterprise sales | ✅ LinkedIn |
+| Q3 2024 | Metro Pest Solutions case study — 34% success rate in urban environments | ✅ Company website |
+| Q2 2024 | Launched Prey Vision API for developer ecosystem | ✅ Product Hunt |
+
+---
+
+## 💬 Field Intel from Slack
+
+*Sources: #intel-coyote-tech. All [Anecdotal] unless noted.*
+
+| Date | Source | Intel | Confidence |
+|------|--------|-------|------------|
+| 2026-01-28 | Wile E. Coyote (via account team) | Wile mentioned he'd been demoed Canyon Mode. Said it looked impressive in the sales environment but he was "waiting to see it work in the Painted Desert before he'd switch." No indication he's actively evaluating. | 💬 Anecdotal |
+| 2026-01-14 | Roadrunner Show floor, Eloise Peck | Coyote Tech booth was busy. Two Acme customers spotted in conversation with their sales reps — Desert Fox Enterprises and ToonCatch. Both are renewal accounts this quarter. | 💬 Anecdotal |
+| 2025-11-03 | Sam Tregidga | Lost a deal at Mesa Canyon Pest Control to Coyote Tech. Buyer cited "autonomous operation" as a must-have. Price wasn't the issue — they wanted no human in the loop. Coyote beat us on the use case, not on cost. | 💬 Anecdotal |
+| 2025-10-19 | Eloise Peck | Spoke with a former Coyote Tech engineer at a conference. Said the Canyon Mode GPS-denied nav is "held together with string" internally — the beta launch is a marketing move to buy time while they rebuild the nav stack. | 💬 Anecdotal — treat as unverified |
+
+---
+
+## 🛠️ Products
 
 ### Product Suite
 
@@ -80,145 +122,120 @@ Total funding: $125M.
 
 ### Technical Capabilities
 
-- **AI/ML Core**: Custom transformer-based prey identification model trained on 2M+ images
-- **Autonomous Navigation**: SLAM-based navigation (struggles in featureless desert terrain)
-- **Fleet Coordination**: Multi-drone swarm behaviour for coordinated pursuit
-- **Cloud Platform**: Built on GCP with Kubernetes, real-time telemetry streaming
-- **Battery Life**: 45-minute flight time per drone (major limitation for extended pursuits)
+- **AI/ML Core:** Custom transformer-based prey identification model trained on 2M+ images
+- **Autonomous Navigation:** SLAM-based navigation (struggles in featureless desert terrain)
+- **Fleet Coordination:** Multi-drone swarm behaviour for coordinated pursuit
+- **Cloud Platform:** Built on GCP with Kubernetes, real-time telemetry streaming
+- **Battery Life:** 45-minute flight time per drone (major limitation for extended pursuits)
 
-## Feature Comparison
+---
 
-| Feature Area | Their Capability | Our Capability | Assessment |
-|-------------|-----------------|----------------|------------|
-| AI Targeting | Custom transformer model, computer vision-based prey ID | AnvilOS AI trajectory calculation, terrain-aware | 🟡 Comparable — different approaches, both evolving |
-| Autonomous Operation | Fully autonomous drone pursuit, no human intervention needed | Human-directed with AI-assisted targeting | 🔴 They lead — autonomy is their core differentiator |
-| Product Reliability | 12% capture rate in field conditions; major GPS/thermal issues in deserts | 18% capture rate with AnvilOS; reliable in all terrain | 🟢 We lead — our hardware is proven in harsh conditions |
-| Product Range | Drones only — no hardware alternatives | Full suite: anvils, catapults, explosives, gadgets + software | 🟢 We lead — significantly broader product catalogue |
-| Deployment Speed | 5-minute drone launch from vehicle | Requires site setup for catapults; instant for AnvilOS-guided drops | 🔴 They lead — faster time-to-deployment |
-| Urban Capability | Strong — drones work well in urban environments | Limited — anvils and explosives problematic in urban settings | 🔴 They lead — significant advantage in urban pest control |
+## 📊 Feature Comparison
 
-## Customers
+*Assessment key: 🟢 We lead | 🟡 Comparable | 🔴 They lead | ⚪ Not applicable*
 
-| Customer | Region | Details |
-|----------|--------|---------|
+| Feature area | Their capability | Our capability | Customer impact | Assessment |
+|-------------|-----------------|----------------|-----------------|------------|
+| **AI targeting** | Custom transformer model, computer vision-based prey ID | AnvilOS AI trajectory calculation, terrain-aware | Both use AI but for different approaches. Buyers evaluating "AI" claims should probe actual field results, not lab benchmarks. | 🟡 Comparable |
+| **Autonomous operation** | Fully autonomous drone pursuit, no human intervention | Human-directed with AI-assisted targeting | Autonomy is their core differentiator and genuinely compelling. Position AnvilOS as "AI-enhanced human expertise" — more reliable because a human stays in the loop. | 🔴 They lead |
+| **Product reliability** | 12% capture rate in field conditions; major GPS/thermal issues in deserts | 18% capture rate with AnvilOS; reliable in all terrain | Concrete numbers win this argument. Ask them for independent field data, not controlled demos. | 🟢 We lead |
+| **Product range** | Drones only — no hardware alternatives | Full suite: anvils, catapults, explosives, gadgets + software | Single-vendor flexibility matters to enterprise buyers with complex operations. | 🟢 We lead |
+| **Deployment speed** | 5-minute drone launch from vehicle | Requires site setup for catapults; instant for AnvilOS-guided drops | Speed matters in urban / fast-response scenarios. Less important in planned operations. | 🔴 They lead |
+| **Urban capability** | Strong — drones excel in dense urban environments | Limited — anvils and explosives problematic in urban settings | Real gap. If the account is primarily urban pest control, Coyote Tech has a genuine advantage. | 🔴 They lead |
+
+---
+
+## 👥 Customers
+
+| Customer | Region | Notes |
+|----------|--------|-------|
 | Desert Fox Enterprises | Southwest US | Largest client; 12-drone fleet |
 | Metro Pest Solutions | New York | Urban pest control; key reference client |
 | Wild West Holdings | Texas | Ranch predator management |
 | ToonCatch Inc | California | Entertainment industry live capture |
 
-## Revenue Model
+---
 
-SaaS + hardware pricing:
+## 💰 Pricing Intel
 
-- **Drone hardware**: $15,000–$45,000 per unit
-- **FlockOS platform**: $3,000–$8,000/month per fleet
-- **Prey Vision API**: Usage-based pricing ($0.02/API call)
-- **Maintenance contracts**: 20% of hardware cost annually
+Public pricing:
 
-## Employee Sentiment
+- **Drone hardware:** $15,000–$45,000 per unit
+- **FlockOS platform:** $3,000–$8,000/month per fleet
+- **Prey Vision API:** Usage-based ($0.02/API call)
+- **Maintenance contracts:** 20% of hardware cost annually
 
-| Platform | Rating | Review Count |
-|----------|--------|--------------|
-| Glassdoor | 4.1/5 | 42 reviews |
+Total cost of ownership for a typical enterprise deployment (5-drone fleet) is significantly higher than an AnvilOS subscription. This is a strong lever in budget-sensitive deals — run the numbers explicitly with the buyer.
 
-### Key Themes
+---
 
-**Positive:**
+## 🏢 Company Overview
 
-- Exciting mission and cutting-edge AI technology
-- Strong engineering culture with top-tier talent
-- Generous equity packages and startup energy
-- "Working on genuinely hard problems"
+### Key Facts
 
-**Negative:**
+| Attribute | Detail |
+|-----------|--------|
+| Founded | 2021 |
+| Headquarters | San Francisco, CA |
+| Employees | 200 |
+| Ownership | VC-backed (Series C) |
+| Revenue | ~$18M ARR (estimated) |
+| Growth Rate | ~120% YoY |
+| Profitability | Not profitable; ~$40M annual burn rate |
+| Global Presence | San Francisco (HQ), Austin (engineering), Tel Aviv (AI research) |
 
-- Burn rate concerns — "runway anxiety" mentioned in multiple reviews
-- Sales team overselling capabilities that engineering can't deliver
-- Product reliability issues causing customer frustration and engineering burnout
-- Work-life balance challenging during "launch crunch" periods
+### Leadership
 
-## Competitive Landscape
+| Role | Name | Background |
+|------|------|------------|
+| CEO & Co-founder | Chase Wiley | Ex-DJI product lead; Stanford CS |
+| CTO & Co-founder | Dr. Astra Falcon | Former Google DeepMind researcher; PhD in computer vision |
+| VP Sales | Dash Runner | Ex-Acme enterprise sales director (departed 2023) |
+
+### Funding
+
+| Round | Date | Amount | Investor(s) | Valuation |
+|-------|------|--------|-------------|-----------|
+| Seed | Q2 2021 | $5M | Desert Ventures, Y Combinator | $20M |
+| Series A | Q1 2022 | $15M | Roadside Ventures, Sequoia Scout | $60M |
+| Series B | Q3 2023 | $30M | Roadside Ventures (lead), Tiger Global | $150M |
+| Series C | Q1 2025 | $75M | SoftBank Vision Fund, Roadside Ventures | $400M |
+
+Total funding: $125M. At ~$40M annual burn and ~$18M ARR, they need Series D by mid-2027.
+
+---
+
+## 😐 Employee Sentiment
+
+| Platform | Rating | Reviews | Recommend |
+|----------|--------|---------|-----------|
+| Glassdoor | 4.1/5 | 42 | — |
+
+**Positive themes:** Exciting mission and cutting-edge AI technology; strong engineering culture with top-tier talent; generous equity; "working on genuinely hard problems."
+
+**Negative themes:** Burn rate concerns ("runway anxiety"); sales team overselling capabilities engineering can't deliver; product reliability issues causing customer frustration and engineering burnout; work-life balance challenging during launch crunch periods.
+
+---
+
+## 🏁 Competitive Landscape
 
 Coyote Tech positions itself as the future of predator solutions — "Why drop anvils when you can deploy intelligence?" Their marketing heavily targets Acme customers dissatisfied with traditional hardware reliability.
 
-They view Acme as the legacy incumbent ripe for disruption, and Roadrunner Systems as a potential technology partner (their evasion data would improve drone targeting).
+They view Acme as the legacy incumbent ripe for disruption, and Roadrunner Systems as a potential technology partner (their evasion data would improve drone targeting accuracy).
 
-## Strengths and Weaknesses
+---
 
-### Strengths
+## 🔗 Sources
 
-- AI-first approach genuinely differentiated from traditional hardware
-- Strong VC backing provides runway for aggressive growth
-- Autonomous operation reduces operator error
-- Excellent in urban environments where traditional methods fail
-- Recruited Acme's former VP Sales (deep customer knowledge)
-
-### Weaknesses
-
-- Product reliability is genuinely poor in core desert market (12% success rate)
-- GPS dependency is a fundamental architecture limitation in canyon environments
-- 45-minute battery life insufficient for extended pursuits
-- Burn rate of ~$40M/year with only ~$18M ARR — needs continued funding
-- No hardware fallback — when drones fail, there's no Plan B
-- Customer expectations set by marketing exceed actual product capability
-
-## Recent Developments
-
-| Date | Development | Source |
-|------|-------------|--------|
-| Jan 2026 | Announced "Canyon Mode" — new GPS-denied navigation capability (beta) | Company blog |
-| Q1 2025 | Series C at $400M valuation; SoftBank Vision Fund leads | TechCrunch |
-| Q4 2024 | Hired Dash Runner (ex-Acme VP Sales) to lead enterprise sales | LinkedIn |
-| Q3 2024 | Metro Pest Solutions case study — 34% success rate in urban environments | Company website |
-| Q2 2024 | Launched Prey Vision API for developer ecosystem | Product Hunt |
-
-## Strategic Assessment
-
-### Threat Level: Medium
-
-Coyote Tech represents a genuine long-term threat through the autonomous/AI narrative, but their near-term product reliability problems and funding dependency limit their ability to displace Acme in core markets. The threat escalates to High if they solve the desert reliability problem (Canyon Mode to watch) or if they secure a dominant position in urban pest control and expand from there.
-
-### Where They Win
-
-- **Urban pest control** — drones significantly outperform traditional hardware in dense environments
-- **"Innovation narrative"** customers — buyers who want to be seen as forward-thinking and are willing to tolerate lower reliability for the autonomy story
-- **Fast deployment scenarios** — when speed of deployment matters more than success rate
-- **Clients burned by Acme failures** — Dash Runner (ex-Acme) is specifically targeting dissatisfied Acme customers
-
-### Where We Win
-
-- **Desert/canyon operations** — our core market, where their drones fundamentally struggle
-- **Reliability-sensitive clients** — customers who need proven capture rates, not promising demos
-- **Enterprise complexity** — clients needing a full suite of solutions (anvils + catapults + explosives + software) can't get that from Coyote Tech
-- **Budget-conscious buyers** — AnvilOS subscription is significantly cheaper than a drone fleet
-- **Regulated environments** — our OSHA track record (imperfect as it is) far exceeds their drone safety record
-
-### Positioning Implications
-
-- Lead with **reliability and proven capture rates** when competing against Coyote Tech
-- Acknowledge the **autonomy trend** but position AnvilOS as "AI-enhanced human expertise" vs. "unproven autonomous systems"
-- Use their **12% field success rate** as concrete evidence — "autonomy means nothing if it doesn't work"
-- Highlight the **breadth of our product suite** — one vendor for everything vs. drones-only
-
-### Roadmap Implications
-
-- **AI investment acceleration** — we need to close the autonomy gap with AnvilOS v3.0
-- **Urban product development** — our weakness in urban environments is real and growing; consider a lightweight drone offering or partnership
-- **Canyon Mode watch** — if they solve GPS-denied navigation, our desert advantage narrows significantly
-
-### Key Watch Areas
-
-- **Canyon Mode reliability data** — if they achieve >20% success rate in desert conditions, threat level moves to High
-- **Next funding round** — at $40M burn rate, they need Series D by mid-2027 or face cash constraints
-- **Dash Runner's impact** — watch for enterprise client defections, particularly in the 6-12 months after his hire
-- **Urban market traction** — if they establish dominance in urban pest control ($2B TAM), they'll have the revenue base to fund desert R&D
-
-## Sources
-
-| Source Type | URL | Date Accessed |
-|-------------|-----|---------------|
+| Source | URL | Date Accessed |
+|--------|-----|---------------|
 | Company website | https://www.coyotetech.example.com | 2026-02-01 |
 | TechCrunch funding article | https://techcrunch.example.com/coyote-tech-series-c | 2026-02-01 |
 | Glassdoor reviews | https://www.glassdoor.example.com/coyote-tech | 2026-02-01 |
 | CEO interview (TechCrunch) | https://techcrunch.example.com/coyote-tech-interview | 2026-01-15 |
 | Product Hunt launch | https://www.producthunt.example.com/posts/prey-vision-api | 2024-06-15 |
+| Slack channel | | |
+
+---
+
+*Data confidence: ✅ Verified = confirmed public source | 💬 Anecdotal = field intel, unverified | 🔍 Inferred = logical conclusion from available info*
