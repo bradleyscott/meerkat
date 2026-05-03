@@ -148,9 +148,9 @@ context/industry/digests/
 context/personas/
 context/personas/users/
 context/personas/buyers/
-context/outputs/
-context/outputs/opportunities/
-context/outputs/insights/
+outputs/
+outputs/opportunities/
+outputs/insights/
 ```
 
 **5b. Write configuration:**

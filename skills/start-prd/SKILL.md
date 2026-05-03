@@ -150,7 +150,7 @@ If the PM wants to explore further, repeat 5a–5c for the new areas. Otherwise,
 
 Read the [opportunity template](references/opportunity-template.md) and use it to write a comprehensive record of the idea.
 
-**Save location:** Create a folder under `context/outputs/opportunities/` named with a short descriptive slug in lowercase with hyphens (e.g., `context/outputs/opportunities/mobile-billing-app/`). Save the document as `opportunity.md` inside this folder. Ask the user to confirm the folder name before creating it.
+**Save location:** Create a folder under `outputs/opportunities/` named with a short descriptive slug in lowercase with hyphens (e.g., `outputs/opportunities/mobile-billing-app/`). Save the document as `opportunity.md` inside this folder. Ask the user to confirm the folder name before creating it.
 
 **Incorporating research findings:** If deep research was conducted in Step 5, weave findings directly into the relevant sections of the document rather than isolating them in a separate section. Mark claims that are backed by research with source attribution (e.g., inline links or footnotes). Include a **Research Notes** appendix at the end of the document listing each research area, key findings, and sources — this serves as an audit trail while the main body reads naturally.
 

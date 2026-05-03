@@ -148,7 +148,7 @@ Present the map as a table grouped by quadrant, with each assumption tagged by i
 
 Read the [assumptions template](references/assumptions-template.md) and use it to write the assumptions document.
 
-**Save location:** If the source document is inside an opportunity folder (e.g., `context/outputs/opportunities/some-idea/opportunity.md`), save as `assumptions.md` in the same folder. Otherwise, ask the user where to save it.
+**Save location:** If the source document is inside an opportunity folder (e.g., `outputs/opportunities/some-idea/opportunity.md`), save as `assumptions.md` in the same folder. Otherwise, ask the user where to save it.
 
 After saving, tell the PM:
 - Review the assumption map, particularly the 🔴 quadrant

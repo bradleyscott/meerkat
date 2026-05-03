@@ -41,20 +41,20 @@ Each skill can also be used independently — `identify-prd-assumptions` can ana
 
 #### Output Convention
 
-Each opportunity gets its own folder under `context/outputs/opportunities/`:
+Each opportunity gets its own folder under `outputs/opportunities/`:
 
 ```
-context/outputs/opportunities/mobile-billing-app/
+outputs/opportunities/mobile-billing-app/
   opportunity.md        ← from start-prd
   assumptions.md        ← from identify-prd-assumptions
   validation-plan.md    ← from suggest-discovery-plan
   readiness-check.md    ← from check-prd-ready
 ```
 
-Interview insights are stored separately under `context/outputs/insights/`:
+Interview insights are stored separately under `outputs/insights/`:
 
 ```
-context/outputs/insights/2026-02-billing-interviews/
+outputs/insights/2026-02-billing-interviews/
   p01-analysis.md       ← individual transcript analysis
   p02-analysis.md       ← individual transcript analysis
   synthesis.md          ← cross-transcript synthesis

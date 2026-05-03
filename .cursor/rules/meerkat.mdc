@@ -20,7 +20,7 @@ Company data lives in the `context/` directory at the repo root:
 - `context/personas/users/` — User role persona files (one per persona)
 - `context/personas/buyers/` — Buyer role persona files (one per persona)
 - `context/role/` — Role-specific context and notes
-- `context/outputs/` — Generated documents from skill runs
+- `outputs/` — Generated documents from skill runs
 
 Other key directories:
 
