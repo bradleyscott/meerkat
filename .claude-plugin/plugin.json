@@ -1,0 +1,11 @@
+{
+  "name": "meerkat",
+  "version": "1.0.0",
+  "description": "A pure-markdown product management framework — competitive intelligence, opportunity exploration, assumption mapping, and validation planning, grounded in your company context.",
+  "author": {
+    "name": "Bradley Scott",
+    "url": "https://github.com/bradleyscott"
+  },
+  "repository": "https://github.com/bradleyscott/meerkat",
+  "homepage": "https://github.com/bradleyscott/meerkat"
+}

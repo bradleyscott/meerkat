@@ -15,7 +15,7 @@ This skill runs autonomously without user interaction. Do not prompt for confirm
 
 ## Prerequisites
 
-This skill requires an industry landscape document created by the **research-industry-sources** skill. If `context/industry/landscape.md` does not exist, output a message telling the user to run `/research-industry` first, and stop.
+This skill requires an industry landscape document created by the **research-industry** skill. If `context/industry/landscape.md` does not exist, output a message telling the user to run `/research-industry` first, and stop.
 
 ## Configuration
 
@@ -268,4 +268,4 @@ When run via a scheduler, ensure the environment has access to the required MCP 
 - **Confidence matters** — never amplify uncertain information. Low-confidence findings go into the digest as FYI with uncertainty noted, not into Slack as alerts
 - **Boundary clarity** — competitor-specific developments belong in competitor monitoring. Industry-level developments belong here. When in doubt, capture the industry angle and cross-reference
 - **Autonomous but bounded** — this skill writes digests and posts messages but does not make strategic decisions. It recommends responses; humans decide whether to act
-- **Incremental, not comprehensive** — each run adds what's new. It doesn't re-research the entire industry. The research-industry-sources skill handles deep dives and periodic landscape refreshes
+- **Incremental, not comprehensive** — each run adds what's new. It doesn't re-research the entire industry. The research-industry skill handles deep dives and periodic landscape refreshes

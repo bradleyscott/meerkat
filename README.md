@@ -59,8 +59,25 @@ Browse the [example content](example/) (a fictional company called Acme Anvils) 
 
 ## Quick Start
 
+### As a Claude Code plugin (recommended)
+
+In any project in [Claude Code](https://claude.ai/code):
+
+```
+/plugin marketplace add bradleyscott/meerkat
+/plugin install meerkat@bradleyscott-meerkat
+```
+
+Then:
+
+1. Run `/meerkat:onboard` — a guided conversation that captures your company, product, and role context, then builds your workspace
+2. Run `/meerkat:start-prd` to explore your first product idea
+3. Run `/meerkat:research-competitors` to profile a key competitor
+
+### Clone-based (Cursor, Amazon Q, or customisation)
+
 ```bash
-git clone <repo-url> my-pm-context
+git clone https://github.com/bradleyscott/meerkat my-pm-context
 cd my-pm-context
 ```
 
@@ -96,7 +113,7 @@ git pull origin main
 
 ## Integrations
 
-**Source sync** — Sync documents to and from Confluence or Notion with `/push` and `/pull`. The platform is auto-detected from the `source_url` in each file's frontmatter. Confluence requires the [mcp-atlassian](https://github.com/sooperset/mcp-atlassian) MCP server; Notion uses the hosted MCP server with OAuth.
+**Source sync** — Sync documents to and from Confluence, Notion, or Google Docs with `/push` and `/pull`. The platform is auto-detected from the `source_url` in each file's frontmatter. Confluence requires the [mcp-atlassian](https://github.com/sooperset/mcp-atlassian) MCP server; Notion and Google Docs use hosted MCP servers with OAuth (no API tokens needed).
 
 **Slack** — The monitoring skills (`/monitor-competitors`, `/monitor-industry`) can post updates to Slack channels via the [Slack MCP server](https://docs.slack.dev/ai/slack-mcp-server/).
 
