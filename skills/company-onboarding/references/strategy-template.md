@@ -7,8 +7,8 @@ Use this template to structure the company strategy document. Populate from the 
 ```yaml
 ---
 title: Company Strategy
-wiki_title:
-wiki_url:
+source_title:
+source_url:
 ---
 ```
 

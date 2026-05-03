@@ -34,11 +34,11 @@ Research Progress:
 
 ### Step 1: Load context
 
-Read `config.json` at the project root to get the `company_dir` value (e.g., `acme`). Then read the relevant files in that directory to understand the business environment:
+Read the relevant context files:
 
-- `{company_dir}/company` — company overview, strategy, revenue model, financials
-- `{company_dir}/product` — product positioning, strategic roadmap, OKRs, vision documents
-- `{company_dir}/competitors` — existing competitor profiles (to understand what's already known and calibrate depth)
+- `context/company` — company overview, strategy, revenue model, financials
+- `context/product` — product positioning, strategic roadmap, OKRs, vision documents
+- `context/competitors` — existing competitor profiles (to understand what's already known and calibrate depth)
 
 This context is essential for writing the Strategic Assessment later — you need to understand your own company's positioning, strengths, and strategy to assess what a competitor means for the business.
 
@@ -48,7 +48,7 @@ This context is essential for writing the Strategic Assessment later — you nee
 
 **If the user doesn't specify a competitor:**
 
-1. Check whether competitor profiles already exist in `{company_dir}/competitors`. If they do, ask whether the user wants to deepen an existing profile or research a new competitor.
+1. Check whether competitor profiles already exist in `context/competitors`. If they do, ask whether the user wants to deepen an existing profile or research a new competitor.
 2. If researching a new competitor, use your understanding of the company's market and product positioning to suggest 3–5 competitors that warrant research. For each, briefly explain why they're relevant (direct competitor, adjacent threat, emerging disruptor, etc.).
 3. Ask the user to confirm which competitor to research.
 
@@ -122,7 +122,7 @@ Use targeted queries to find specific information. Adapt these patterns to the c
 
 Read the [competitor template](references/competitor-template.md) and use it to write (or update) the competitor profile.
 
-**Save location:** `{company_dir}/competitors/<name>/summary.md` where `<name>` is the competitor's name in lowercase (e.g., `mycompany/competitors/kaluza/summary.md`).
+**Save location:** `context/competitors/<name>/summary.md` where `<name>` is the competitor's name in lowercase (e.g., `mycompany/competitors/kaluza/summary.md`).
 
 **Frontmatter:** Populate all known fields. Leave fields blank (not absent) if information wasn't found — this signals "not yet researched" rather than "doesn't exist."
 

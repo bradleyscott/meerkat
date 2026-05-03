@@ -51,14 +51,14 @@ Insights Extraction Progress:
 
 ### Step 1: Load context
 
-Read `config.json` at the project root to get the `company_dir` value. Then read the relevant context files:
+Read the relevant context files:
 
-- `{company_dir}/company/` — company profile, strategy, revenue model
-- `{company_dir}/competitors/` — competitor profiles
-- `{company_dir}/product/` — OKRs, positioning, roadmap, vision documents
-- `{company_dir}/role/` — PM's role context
-- `{company_dir}/personas/users/` — user role persona files (if they exist)
-- `{company_dir}/personas/buyers/` — buyer role persona files (if they exist)
+- `context/company/` — company profile, strategy, revenue model
+- `context/competitors/` — competitor profiles
+- `context/product/` — OKRs, positioning, roadmap, vision documents
+- `context/role/` — PM's role context
+- `context/personas/users/` — user role persona files (if they exist)
+- `context/personas/buyers/` — buyer role persona files (if they exist)
 
 If no persona files exist, note this and proceed. The skill works without them but provides richer participant mapping and persona update recommendations when they are available.
 
@@ -232,11 +232,11 @@ Read the output templates from the references directory:
 - [Individual analysis template](references/individual-analysis-template.md)
 - [Synthesis template](references/synthesis-template.md)
 
-**Save location:** Create a folder under `{company_dir}/outputs/insights/` named with a descriptive slug (e.g., `{company_dir}/outputs/insights/2026-02-billing-interviews/`). Ask the PM to confirm the folder name before creating it.
+**Save location:** Create a folder under `context/outputs/insights/` named with a descriptive slug (e.g., `context/outputs/insights/2026-02-billing-interviews/`). Ask the PM to confirm the folder name before creating it.
 
 Save individual analyses as `{participant-id}-analysis.md` and the synthesis (if multiple transcripts) as `synthesis.md`.
 
-**Persona updates:** If the PM approved persona updates in Step 7, update the relevant persona files in `{company_dir}/personas/users/` or `{company_dir}/personas/buyers/`. Add a provenance note at the bottom of each updated section citing the interview batch (e.g., "Updated based on insights from {batch-slug}, {date}").
+**Persona updates:** If the PM approved persona updates in Step 7, update the relevant persona files in `context/personas/users/` or `context/personas/buyers/`. Add a provenance note at the bottom of each updated section citing the interview batch (e.g., "Updated based on insights from {batch-slug}, {date}").
 
 If a new persona was identified and approved, create a new persona file using the appropriate template from [user persona template](references/user-persona-template.md) or [buyer persona template](references/buyer-persona-template.md).
 

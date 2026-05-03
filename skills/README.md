@@ -68,14 +68,14 @@ research-competitors → monitor-competitors (scheduled)
 
 | Skill | Purpose | Input | Output |
 | --- | --- | --- | --- |
-| **research-competitors** | Profiles and strategically assesses a single competitor | Competitor name (or discovery) | `{company_dir}/competitors/<name>/summary.md` |
+| **research-competitors** | Profiles and strategically assesses a single competitor | Competitor name (or discovery) | `context/competitors/<name>/summary.md` |
 | **monitor-competitors** | Scans competitors for changes and alerts the team via Slack | Runs autonomously on a schedule | Updated competitor files + Slack posts |
 
 - **research-competitors** is interactive — it works with the user to identify, research, and assess a competitor
 - **monitor-competitors** is autonomous — it runs without user interaction, typically on a weekly schedule
-- Both skills reference the same competitor profile template and output to the `{company_dir}/competitors/` directory
-- Monitor uses Google Alerts RSS feeds (`feed_url` in frontmatter) as its primary signal source
-- Slack posting (via Slack MCP) and wiki sync are optional but recommended for the monitoring skill
+- Both skills reference the same competitor profile template and output to the `context/competitors/` directory
+- Monitor uses Google Alerts RSS feeds (`feed_url` in frontmatter) as its primary signal source, and optionally reads a per-competitor internal Slack channel (`slack_channel` in frontmatter) for first-hand field intelligence
+- Slack posting (via Slack MCP) and source sync are optional but recommended for the monitoring skill
 
 ### Industry Intelligence
 
@@ -87,8 +87,8 @@ research-industry-sources → monitor-industry (scheduled)
 
 | Skill | Purpose | Input | Output |
 | --- | --- | --- | --- |
-| **research-industry-sources** | Discovers and curates industry sources organised around strategic topics | Conversation with the PM | `{company_dir}/industry/landscape.md` |
-| **monitor-industry** | Scans industry sources for developments and alerts the team via Slack | Runs autonomously on a schedule | `{company_dir}/industry/digests/{date}.md` + Slack posts |
+| **research-industry-sources** | Discovers and curates industry sources organised around strategic topics | Conversation with the PM | `context/industry/landscape.md` |
+| **monitor-industry** | Scans industry sources for developments and alerts the team via Slack | Runs autonomously on a schedule | `context/industry/digests/{date}.md` + Slack posts |
 
 - **research-industry-sources** is interactive — it helps the PM identify strategic topics and curate high-value sources for each
 - **monitor-industry** is autonomous — it scans sources, classifies findings by urgency, and posts strategic implications to Slack
@@ -105,7 +105,7 @@ Bidirectional sync between local markdown files and wiki platforms (Confluence, 
 | --- | --- | --- | --- |
 | **wiki-sync** | Push/pull markdown files to/from Confluence or Notion | `/push path/to/file.md` or `/pull path/to/file.md` | Updated wiki page or local file |
 
-- Platform is auto-detected from the `wiki_url` domain in frontmatter, or from `config.json` settings
+- Platform is auto-detected from the `source_url` domain in frontmatter, or from `config.json` settings
 - Relative links between markdown files are automatically converted to wiki URLs when pushing, and back to relative paths when pulling
 - Platform-specific logic lives in `skills/wiki-sync/push-{platform}.md` and `pull-{platform}.md`
 

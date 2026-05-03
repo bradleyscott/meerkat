@@ -16,17 +16,19 @@ competitors/
 
 ## What to Include
 
-Each competitor summary should cover:
+Each competitor summary should cover (in this order):
 
-- **Executive summary** — Who they are, why they matter, and current threat level
-- **Overview** — Key facts, leadership, founding story
-- **Funding & financials** — Ownership structure, funding rounds, revenue estimates
+- **TL;DR** — One-sentence description, where they lead, key threat, key advantage
+- **Strategic assessment** — Threat level, where they win/lose, positioning in a live deal, roadmap implications, key watch areas
+- **Value driver assessment** — How this competitor maps against your key value drivers
+- **Recent developments** — Dated entries with confidence indicators (✅ Verified / 💬 Anecdotal / 🔍 Inferred)
+- **Field intel from Slack** — First-hand signals from internal Slack channels
 - **Products** — Product suite, technical capabilities, and a feature comparison against your offering
 - **Customers** — Known customers, target segments, notable wins
-- **Revenue model** — Pricing structure and business model
+- **Pricing intel** — Pricing structure, known deal sizes, field intelligence
+- **Company overview** — Key facts (including revenue), leadership, funding history
 - **Employee sentiment** — Glassdoor ratings and key themes
-- **Strengths and weaknesses** — Honest assessment of where they win and where they struggle
-- **Strategic assessment** — Threat level, positioning implications, roadmap implications, and key watch areas
+- **Competitive landscape** — How they position themselves and who they compete against
 
 The full template is in `skills/research-competitors/references/`.
 
@@ -43,12 +45,16 @@ linkedin: https://www.linkedin.com/company/competitor
 twitter: https://twitter.com/competitor
 subreddit:
 feed_url:
-wiki_title:
-wiki_url:
+slack_channel:
+refresh_due:
+source_title:
+source_url:
 ---
 ```
 
-The `feed_url` field is used by the `/monitor-competitors` skill to check for new mentions via Google Alerts RSS feeds.
+- `feed_url` — used by `/monitor-competitors` to check for new mentions via Google Alerts RSS feeds
+- `slack_channel` — optional internal Slack channel for field intel (e.g. `#intel-competitor-name`); read by `/monitor-competitors` as an additional signal source
+- `refresh_due` — date when the profile is due for its next research refresh
 
 ## Why This Matters
 

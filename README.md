@@ -84,13 +84,13 @@ git pull origin main
 |-----------|---------|---------|
 | `skills/` | Yes | Reusable skill definitions ([full reference](skills/README.md)) |
 | `example/` | Yes | Demo content (Acme Anvils) |
-| `{your-company}/company/` | No | Your company research and context |
-| `{your-company}/competitors/` | No | Your competitor profiles |
-| `{your-company}/product/` | No | OKRs, positioning, roadmap, and vision documents |
-| `{your-company}/personas/` | No | User and buyer role personas |
-| `{your-company}/industry/` | No | Industry landscape and monitoring digests |
-| `{your-company}/role/` | No | Your role-specific context |
-| `{your-company}/outputs/` | No | Generated documents from skill runs |
+| `context/company/` | No | Your company research and context |
+| `context/competitors/` | No | Your competitor profiles |
+| `context/product/` | No | OKRs, positioning, roadmap, and vision documents |
+| `context/personas/` | No | User and buyer role personas |
+| `context/industry/` | No | Industry landscape and monitoring digests |
+| `context/role/` | No | Your role-specific context |
+| `context/outputs/` | No | Generated documents from skill runs |
 
 ## Integrations
 

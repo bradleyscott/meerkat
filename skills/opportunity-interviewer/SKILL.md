@@ -32,7 +32,7 @@ Interview Progress:
 
 ### Step 1: Load context
 
-Read `config.json` at the project root to get the `company_dir` value (e.g., `acme`). Then read the relevant files in that directory (`{company_dir}/company`, `{company_dir}/competitors`, `{company_dir}/product`, `{company_dir}/role`) to understand the PM's environment, objectives, and constraints. Also read `{company_dir}/personas/users/` and `{company_dir}/personas/buyers/` if they exist — persona context helps you ask sharper questions about target users and buyers during probing. Use this to ask better questions and assess strategic fit.
+Read the relevant context files (`context/company`, `context/competitors`, `context/product`, `context/role`) to understand the PM's environment, objectives, and constraints. Also read `context/personas/users/` and `context/personas/buyers/` if they exist — persona context helps you ask sharper questions about target users and buyers during probing. Use this to ask better questions and assess strategic fit.
 
 ### Step 2: Open exploration
 
@@ -56,7 +56,7 @@ Work through each core area the PM hasn't adequately covered. Ask one or two que
 
 **Inline research during probing:**
 
-As the PM talks, look for moments where a quick lookup could sharpen your questions or challenge an assumption. Use the repository context (`{company_dir}/company`, `{company_dir}/competitors`, `{company_dir}/product`) and quick web searches to ground the conversation in evidence.
+As the PM talks, look for moments where a quick lookup could sharpen your questions or challenge an assumption. Use the repository context (`context/company`, `context/competitors`, `context/product`) and quick web searches to ground the conversation in evidence.
 
 - Keep it lightweight — a brief mention, not a lengthy report. The interview should stay conversational.
 - Use findings to ask better follow-up questions, not to lecture the PM.
@@ -122,7 +122,7 @@ Each research agent should use the most appropriate sources for its topic:
 
 | Source | Use for | How |
 |--------|---------|-----|
-| **Repository context** (`{company_dir}/company`, `{company_dir}/competitors`, `{company_dir}/product`) | Strategic fit, competitive landscape, existing customer data | Read relevant files |
+| **Repository context** (`context/company`, `context/competitors`, `context/product`) | Strategic fit, competitive landscape, existing customer data | Read relevant files |
 | **Web search** | Market sizing, industry trends, competitor moves, published benchmarks | Search the web |
 | **Confluence / wiki** | Internal research, past decisions, related initiatives | Search Confluence |
 | **Specific URLs** (provided by the PM) | Analyst reports, articles, data sources the PM references | Fetch and summarise |
@@ -150,7 +150,7 @@ If the PM wants to explore further, repeat 5a–5c for the new areas. Otherwise,
 
 Read the [opportunity template](references/opportunity-template.md) and use it to write a comprehensive record of the idea.
 
-**Save location:** Create a folder under `{company_dir}/outputs/opportunities/` named with a short descriptive slug in lowercase with hyphens (e.g., `{company_dir}/outputs/opportunities/mobile-billing-app/`). Save the document as `opportunity.md` inside this folder. Ask the user to confirm the folder name before creating it.
+**Save location:** Create a folder under `context/outputs/opportunities/` named with a short descriptive slug in lowercase with hyphens (e.g., `context/outputs/opportunities/mobile-billing-app/`). Save the document as `opportunity.md` inside this folder. Ask the user to confirm the folder name before creating it.
 
 **Incorporating research findings:** If deep research was conducted in Step 5, weave findings directly into the relevant sections of the document rather than isolating them in a separate section. Mark claims that are backed by research with source attribution (e.g., inline links or footnotes). Include a **Research Notes** appendix at the end of the document listing each research area, key findings, and sources — this serves as an audit trail while the main body reads naturally.
 

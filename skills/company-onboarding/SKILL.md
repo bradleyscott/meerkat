@@ -32,12 +32,12 @@ Onboarding Progress:
 
 Before doing anything, check the current workspace state:
 
-1. Check whether `config.json` exists at the project root and read it if so
-2. If a company directory already exists with content, tell the PM what you found and ask whether they want to:
+1. Check whether a `context/` directory exists at the project root with content
+2. If it does, tell the PM what you found and ask whether they want to:
    - **Update** — add to or refresh existing content (preserve what's already there)
-   - **Rebuild** — start fresh (rename existing directory to `{dir}.bak` first)
+   - **Rebuild** — start fresh (rename `context/` to `context.bak/` first)
    - **Cancel** — abort if they ran the command by accident
-3. If no company directory exists, proceed to Step 2
+3. If no `context/` directory exists, proceed to Step 2
 
 This handles both first-time onboarding and returning users who want to enrich their context.
 
@@ -47,7 +47,7 @@ Gather information through conversation in two phases. Ask one or two questions 
 
 **Phase A: Identity (required — cannot proceed without these)**
 
-1. **Company or project name** — needed for the directory name (lowercase, no spaces, hyphens OK) and the full company name for document headings. Ask for both. Example: directory `acme`, full name `Acme Anvils Corp`.
+1. **Company or project name** — the full company name used for document headings. Example: `Acme Anvils Corp`.
 2. **What the company does** — "What does your company do, in plain language?" One or two sentences is fine.
 3. **Your product** — "What specific product or product area are you responsible for?" This grounds everything that follows.
 
@@ -80,18 +80,19 @@ Don't push on these if the PM is brief. Role context is personal and some people
 - If the PM gives short answers, that's fine. Don't push. Documents can be thin initially and enriched later.
 - Acknowledge what you already know. If the PM names a well-known company, say so and verify rather than asking from scratch. ("I know Acme as an industrial supply company — is that right? Anything important I'm missing?")
 - Track what has been covered well and what is thin. You'll use this to prioritise the research offer in Step 4.
+- **URLs as context:** At any point the PM can share a URL alongside their answer (or instead of one). Use WebFetch to read it immediately, extract all relevant facts (company description, product details, strategy, financials, team context), and treat the findings as if the PM had answered those questions. Confirm what you extracted ("I read your company page and found X, Y, Z — does that look right?") rather than re-asking questions the URL already answered.
 
 ### Step 3: Source document ingestion (optional)
 
-After the conversation, ask: "Do you have any existing documents I should read? Annual reports, strategy decks, product briefs, or similar? You can share file paths or drop PDFs into `{company_dir}/company/context/`."
+After the conversation, ask: "Do you have any existing documents or URLs I should read? Annual reports, strategy decks, product briefs — share file paths, PDFs, or URLs. You can also drop PDFs into `context/company/source-docs/`."
 
-If the PM provides documents:
+If the PM provides documents or URLs:
 
-1. Read each document (PDF support is available)
+1. Read each document (PDF support is available) or use WebFetch to read each URL
 2. Extract relevant information to enrich the company profile, strategy, and revenue model documents
 3. Note key facts and figures with source attribution
 
-If the PM has no documents, proceed without them. Don't make this feel like a gap — many users won't have documents ready at setup time. A simple "No worries, you can always add them later" is sufficient.
+If the PM has no documents or URLs, proceed without them. Don't make this feel like a gap — many users won't have materials ready at setup time. A simple "No worries, you can always add them later" is sufficient.
 
 ### Step 4: Company research (optional)
 
@@ -134,28 +135,28 @@ Perform all file system operations. This step should be silent and efficient —
 **5a. Create directory structure:**
 
 ```
-{company_dir}/
-{company_dir}/company/
-{company_dir}/company/context/       (if source docs were provided)
-{company_dir}/competitors/
-{company_dir}/competitors/{name}/    (for each named competitor)
-{company_dir}/product/
-{company_dir}/product/vision/
-{company_dir}/role/
-{company_dir}/industry/
-{company_dir}/industry/digests/
-{company_dir}/personas/
-{company_dir}/personas/users/
-{company_dir}/personas/buyers/
-{company_dir}/outputs/
-{company_dir}/outputs/opportunities/
-{company_dir}/outputs/insights/
+context/
+context/company/
+context/company/source-docs/       (if source docs were provided)
+context/competitors/
+context/competitors/{name}/    (for each named competitor)
+context/product/
+context/product/vision/
+context/role/
+context/industry/
+context/industry/digests/
+context/personas/
+context/personas/users/
+context/personas/buyers/
+context/outputs/
+context/outputs/opportunities/
+context/outputs/insights/
 ```
 
 **5b. Write configuration:**
 
-- Write `config.json` with the `company_dir` value and default settings (Slack channels, empty Confluence config). If `config.json` already exists, update the `company_dir` field and preserve other settings
-- Add `{company_dir}/` to `.gitignore` if not already present
+- Write `config.json` with default settings (Slack channels, empty Confluence config). If `config.json` already exists, preserve existing settings.
+- Add `context/` to `.gitignore` if not already present
 
 **5c. Create documents:**
 
@@ -163,14 +164,14 @@ For each document, read the corresponding reference template, merge in the infor
 
 | File | Template | Content source |
 |------|----------|----------------|
-| `{company_dir}/company/{name}.md` | [Company profile template](references/company-profile-template.md) | Steps 2 + 3 + 4 |
-| `{company_dir}/company/strategy.md` | [Strategy template](references/strategy-template.md) | Steps 2 + 3 + 4 |
-| `{company_dir}/company/revenue-model.md` | [Revenue model template](references/revenue-model-template.md) | Steps 2 + 4 |
-| `{company_dir}/product/okrs.md` | [OKRs template](references/okrs-template.md) | Step 2 (if OKRs shared) |
-| `{company_dir}/product/roadmap.md` | [Roadmap template](references/roadmap-template.md) | Step 2 (if priorities shared) |
-| `{company_dir}/role/context.md` | [Role context template](references/role-context-template.md) | Step 2 Phase C |
+| `context/company/{name}.md` | [Company profile template](references/company-profile-template.md) | Steps 2 + 3 + 4 |
+| `context/company/strategy.md` | [Strategy template](references/strategy-template.md) | Steps 2 + 3 + 4 |
+| `context/company/revenue-model.md` | [Revenue model template](references/revenue-model-template.md) | Steps 2 + 4 |
+| `context/product/okrs.md` | [OKRs template](references/okrs-template.md) | Step 2 (if OKRs shared) |
+| `context/product/roadmap.md` | [Roadmap template](references/roadmap-template.md) | Step 2 (if priorities shared) |
+| `context/role/context.md` | [Role context template](references/role-context-template.md) | Step 2 Phase C |
 
-**Competitor stubs:** For each competitor named in Step 2, create a **minimal stub** file at `{company_dir}/competitors/{name}/summary.md` with only YAML frontmatter:
+**Competitor stubs:** For each competitor named in Step 2, create a **minimal stub** file at `context/competitors/{name}/summary.md` with only YAML frontmatter:
 
 ```yaml
 ---
@@ -181,8 +182,8 @@ linkedin:
 twitter:
 subreddit:
 feed_url:
-wiki_title:
-wiki_url:
+source_title:
+source_url:
 ---
 
 <!-- Run /research-competitors {name} to build a full profile -->
@@ -190,7 +191,7 @@ wiki_url:
 
 Do NOT attempt to research competitors during onboarding. The `research-competitors` skill exists for that purpose.
 
-**Role context:** Create `{company_dir}/role/context.md` using the [role context template](references/role-context-template.md). Populate sections from what the PM shared in Phase C. If a section wasn't covered, include the section heading with a `<!-- TODO: ... -->` marker — a thin role file is still useful and can be enriched later.
+**Role context:** Create `context/role/context.md` using the [role context template](references/role-context-template.md). Populate sections from what the PM shared in Phase C. If a section wasn't covered, include the section heading with a `<!-- TODO: ... -->` marker — a thin role file is still useful and can be enriched later.
 
 **Important:** Do NOT copy content from the `example/` directory. All content should be generated from conversation, research, and templates.
 
@@ -199,15 +200,15 @@ Do NOT attempt to research competitors during onboarding. The `research-competit
 After creating all files, present a summary to the PM:
 
 ```
-Workspace created: {company_dir}/
+Workspace created: context/
 
 Documents created:
-  {company_dir}/company/{name}.md          ★★★ well-populated
-  {company_dir}/company/strategy.md        ★★  partial — strategic pillars need detail
-  {company_dir}/company/revenue-model.md   ★   skeletal — revenue streams outlined only
-  {company_dir}/product/okrs.md            ★   skeletal — no OKRs provided
-  {company_dir}/role/context.md            ★★  partial — role and team captured
-  {company_dir}/competitors/               3 competitor stubs created
+  context/company/{name}.md          ★★★ well-populated
+  context/company/strategy.md        ★★  partial — strategic pillars need detail
+  context/company/revenue-model.md   ★   skeletal — revenue streams outlined only
+  context/product/okrs.md            ★   skeletal — no OKRs provided
+  context/role/context.md            ★★  partial — role and team captured
+  context/competitors/               3 competitor stubs created
 
 Sections marked TODO: {count}
 ```
@@ -227,12 +228,12 @@ If the PM wants to review or refine, open the relevant file and work through it 
 Recommend the logical next actions based on what was created. Tailor recommendations to what's actually thin or missing — don't give a generic list.
 
 1. **If competitors were named:** "Run `/research-competitors {name}` to build a full profile for each competitor. This is the most impactful next step."
-2. **If OKRs were thin or missing:** "Add your OKRs to `{company_dir}/product/okrs.md` — skills like the assumption-identifier use these to assess strategic fit."
-3. **If role context was thin:** "Flesh out your role context in `{company_dir}/role/context.md` — it helps skills calibrate recommendations to your team size and influence."
-4. **If source documents weren't provided:** "Drop any strategy decks, annual reports, or product briefs into `{company_dir}/company/context/`. You can run `/onboard` again to read them and enrich your context."
-5. **If roadmap was thin or no vision docs exist:** "Consider writing vision documents for your key strategic bets in `{company_dir}/product/vision/`. Each one explores a single bet — the hypothesis, success criteria, unknowns, and risks. These feed directly into `/identify-assumptions`."
+2. **If OKRs were thin or missing:** "Add your OKRs to `product/okrs.md` — skills like the assumption-identifier use these to assess strategic fit."
+3. **If role context was thin:** "Flesh out your role context in `role/context.md` — it helps skills calibrate recommendations to your team size and influence."
+4. **If source documents weren't provided:** "Drop any strategy decks, annual reports, or product briefs into `context/company/source-docs/`. You can run `/onboard` again to read them and enrich your context."
+5. **If roadmap was thin or no vision docs exist:** "Consider writing vision documents for your key strategic bets in `product/vision/`. Each one explores a single bet — the hypothesis, success criteria, unknowns, and risks. These feed directly into `/identify-assumptions`."
 6. **If the PM is new to the domain:** "Run `/research-industry` to discover the key publications, analysts, regulatory bodies, and thought leaders in your industry. This sets up ongoing monitoring of industry trends that could affect your strategy."
-7. **If personas don't exist yet:** "Create user and buyer personas in `{company_dir}/personas/` — these describe who uses your product and who buys it. They enrich insights extraction, opportunity exploration, and validation planning. See `example/personas/` for the expected format and templates."
+7. **If personas don't exist yet:** "Create user and buyer personas in `personas/` — these describe who uses your product and who buys it. They enrich insights extraction, opportunity exploration, and validation planning. See `example/personas/` for the expected format and templates."
 8. **Always:** "Try `/opportunity-interview` to explore a product idea, or `/research-competitors` to deep-dive a competitor. These skills read the context you just created to provide grounded, specific recommendations."
 
 ## Principles

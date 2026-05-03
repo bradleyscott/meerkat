@@ -1,14 +1,14 @@
 # Vision Document Template
 
-Use this template for a deeper exploration of a specific strategic bet. Each vision document covers one bet — create a separate file for each. These live in `{company_dir}/product/vision/`.
+Use this template for a deeper exploration of a specific strategic bet. Each vision document covers one bet — create a separate file for each. These live in `context/product/vision/`.
 
 ## Frontmatter
 
 ```yaml
 ---
 title: "Vision: {Name of Strategic Bet}"
-wiki_title:
-wiki_url:
+source_title:
+source_url:
 ---
 ```
 

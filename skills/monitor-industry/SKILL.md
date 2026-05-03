@@ -15,13 +15,13 @@ This skill runs autonomously without user interaction. Do not prompt for confirm
 
 ## Prerequisites
 
-This skill requires an industry landscape document created by the **research-industry-sources** skill. If `{company_dir}/industry/landscape.md` does not exist, output a message telling the user to run `/research-industry` first, and stop.
+This skill requires an industry landscape document created by the **research-industry-sources** skill. If `context/industry/landscape.md` does not exist, output a message telling the user to run `/research-industry` first, and stop.
 
 ## Configuration
 
 Before first run, ensure the following are set up:
 
-- **Industry landscape** exists at `{company_dir}/industry/landscape.md` with strategic topics and curated sources. The company directory name is read from the `company_dir` field in `config.json` at the project root
+- **Industry landscape** exists at `context/industry/landscape.md` with strategic topics and curated sources. The company directory name is read from the `context/` directory at the repo root
 - **Google Alerts RSS feeds** are configured for each strategic topic and the feed URLs are populated in the landscape document — this is the primary monitoring signal
 - **Slack MCP** is configured if Slack posting is desired (see Setup section below). If Slack is not configured, the skill still functions — it writes the digest and outputs a summary to the console
 - **Slack channel** — set the target channel in the `slack.industry_intel_channel` field in `config.json` at the project root
@@ -75,12 +75,12 @@ Monitoring Progress:
 
 ### Step 1: Load context
 
-Read `config.json` at the project root to get the `company_dir` value (e.g., `acme`). Then read:
+Read:
 
-- `{company_dir}/company` — company overview, strategy, current priorities
-- `{company_dir}/product` — product positioning, roadmap, OKRs, vision documents
-- `{company_dir}/competitors` — all existing competitor profiles (needed for deduplication in Step 3)
-- `{company_dir}/industry/landscape.md` — strategic topics, curated sources, feed URLs, and monitoring configuration
+- `context/company` — company overview, strategy, current priorities
+- `context/product` — product positioning, roadmap, OKRs, vision documents
+- `context/competitors` — all existing competitor profiles (needed for deduplication in Step 3)
+- `context/industry/landscape.md` — strategic topics, curated sources, feed URLs, and monitoring configuration
 
 From the landscape document, extract:
 
@@ -88,7 +88,7 @@ From the landscape document, extract:
 - Source URLs and feed URLs for each topic
 - The monitoring cadence and any configuration notes
 
-**Read the most recent digest** in `{company_dir}/industry/digests/` (sort by filename to find the latest). You need this to detect what's *new* vs. what's already been reported. If no digest exists yet, this is the first run — everything discovered is new.
+**Read the most recent digest** in `context/industry/digests/` (sort by filename to find the latest). You need this to detect what's *new* vs. what's already been reported. If no digest exists yet, this is the first run — everything discovered is new.
 
 ### Step 2: Scan for new signals
 
@@ -164,7 +164,7 @@ Be specific. "This could affect our business" is useless. "This proposed regulat
 
 ### Step 5: Update digest
 
-Create a new digest file at `{company_dir}/industry/digests/{YYYY-MM-DD}.md` where the date is today's date.
+Create a new digest file at `context/industry/digests/{YYYY-MM-DD}.md` where the date is today's date.
 
 Read the [digest template](references/digest-template.md) and use it to write the digest.
 
