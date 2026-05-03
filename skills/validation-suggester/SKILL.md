@@ -31,7 +31,7 @@ Validation Planning Progress:
 
 ### Step 1: Load broader context
 
-Read `config.json` at the project root to get the `company_dir` value (e.g., `acme`). Then read the relevant files in that directory (`{company_dir}/company`, `{company_dir}/competitors`, `{company_dir}/product`, `{company_dir}/role`) to understand the PM's environment. Also read `{company_dir}/personas/users/` and `{company_dir}/personas/buyers/` if they exist — persona context helps recommend who to recruit for validation experiments and which user segments to target. This context is critical for recommending appropriate validation techniques because:
+Read the relevant context files (`context/company`, `context/competitors`, `context/product`, `context/role`) to understand the PM's environment. Also read `context/personas/users/` and `context/personas/buyers/` if they exist — persona context helps recommend who to recruit for validation experiments and which user segments to target. This context is critical for recommending appropriate validation techniques because:
 
 - **Company context** determines what resources are available (existing customer relationships for interviews, product analytics for data mining, sales team for pre-sales conversations)
 - **Competitive context** affects urgency and what techniques are viable (time pressure may rule out lengthy experiments)
@@ -109,7 +109,7 @@ For each recommendation, specify:
 
 Read the [validation plan template](references/validation-plan-template.md) and use it to write the validation plan document.
 
-**Save location:** If the assumptions document is inside an opportunity folder (e.g., `{company_dir}/outputs/opportunities/some-idea/assumptions.md`), save as `validation-plan.md` in the same folder. Otherwise, ask the user where to save it.
+**Save location:** If the assumptions document is inside an opportunity folder (e.g., `context/outputs/opportunities/some-idea/assumptions.md`), save as `validation-plan.md` in the same folder. Otherwise, ask the user where to save it.
 
 ## Principles
 

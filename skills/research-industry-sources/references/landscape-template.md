@@ -2,8 +2,8 @@
 title: Industry Landscape
 industry:
 date_researched:
-wiki_title:
-wiki_url:
+source_title:
+source_url:
 ---
 
 # {Industry} — Industry Landscape

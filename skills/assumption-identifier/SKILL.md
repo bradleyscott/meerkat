@@ -92,7 +92,7 @@ Assumption Identification Progress:
 
 ### Step 1: Load broader context
 
-Read `config.json` at the project root to get the `company_dir` value (e.g., `acme`). Then read the relevant files in that directory (`{company_dir}/company`, `{company_dir}/competitors`, `{company_dir}/product`, `{company_dir}/role`) to understand the PM's environment, strategic objectives, competitive landscape, and constraints. Also read `{company_dir}/personas/users/` and `{company_dir}/personas/buyers/` if they exist — persona context helps assess desirability and usability assumptions against known user and buyer characteristics. This context is essential for assessing viability and strategic fit — without it, your analysis will be generic rather than specific to the organisation's situation.
+Read the relevant context files (`context/company`, `context/competitors`, `context/product`, `context/role`) to understand the PM's environment, strategic objectives, competitive landscape, and constraints. Also read `context/personas/users/` and `context/personas/buyers/` if they exist — persona context helps assess desirability and usability assumptions against known user and buyer characteristics. This context is essential for assessing viability and strategic fit — without it, your analysis will be generic rather than specific to the organisation's situation.
 
 ### Step 2: Read and understand the document
 
@@ -148,7 +148,7 @@ Present the map as a table grouped by quadrant, with each assumption tagged by i
 
 Read the [assumptions template](references/assumptions-template.md) and use it to write the assumptions document.
 
-**Save location:** If the source document is inside an opportunity folder (e.g., `{company_dir}/outputs/opportunities/some-idea/opportunity.md`), save as `assumptions.md` in the same folder. Otherwise, ask the user where to save it.
+**Save location:** If the source document is inside an opportunity folder (e.g., `context/outputs/opportunities/some-idea/opportunity.md`), save as `assumptions.md` in the same folder. Otherwise, ask the user where to save it.
 
 After saving, tell the PM:
 - Review the assumption map, particularly the 🔴 quadrant

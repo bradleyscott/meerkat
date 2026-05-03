@@ -8,8 +8,8 @@ subreddit:
 feed_url:
 slack_channel:
 refresh_due:
-wiki_title:
-wiki_url:
+source_title:
+source_url:
 ---
 
 # {Company Name}
