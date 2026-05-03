@@ -1,7 +1,7 @@
 ---
 title: Company Strategy
-wiki_title:
-wiki_url:
+source_title:
+source_url:
 ---
 
 # Strategic Direction

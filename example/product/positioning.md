@@ -1,6 +1,6 @@
 ---
-wiki_title:
-wiki_url:
+source_title:
+source_url:
 ---
 
 # Acme Anvils Competitive Positioning Guide

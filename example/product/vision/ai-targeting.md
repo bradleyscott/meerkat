@@ -1,7 +1,7 @@
 ---
 title: "Vision: AI-Powered Predictive Targeting"
-wiki_title:
-wiki_url:
+source_title:
+source_url:
 ---
 
 # Vision: AI-Powered Predictive Targeting

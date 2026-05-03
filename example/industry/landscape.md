@@ -2,8 +2,8 @@
 title: Industry Landscape
 industry: Predator Solutions & Catching Technology
 date_researched: 2026-02-15
-wiki_title:
-wiki_url:
+source_title:
+source_url:
 ---
 
 # Predator Solutions & Catching Technology — Industry Landscape

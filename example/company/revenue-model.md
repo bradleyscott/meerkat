@@ -1,7 +1,7 @@
 ---
 title: Revenue Model
-wiki_title:
-wiki_url:
+source_title:
+source_url:
 ---
 
 # Revenue Model

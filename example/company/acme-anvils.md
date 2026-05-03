@@ -3,8 +3,8 @@ company: Acme Anvils Corp
 website: https://www.acmeanvils.example.com
 feed_url:
 linkedin: https://www.linkedin.com/company/acme-anvils
-wiki_title:
-wiki_url:
+source_title:
+source_url:
 ---
 
 # Acme Anvils Corp

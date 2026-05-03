@@ -30,8 +30,8 @@ The industry landscape uses YAML frontmatter:
 title: Industry Landscape
 industry: Your Industry Name
 date_researched: 2026-02-15
-wiki_title:
-wiki_url:
+source_title:
+source_url:
 ---
 ```
 

@@ -1,8 +1,8 @@
 ---
 persona: "Operations Manager"
 type: user
-wiki_title:
-wiki_url:
+source_title:
+source_url:
 ---
 
 # Operations Manager

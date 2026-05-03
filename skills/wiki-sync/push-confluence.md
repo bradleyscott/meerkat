@@ -1,7 +1,7 @@
 # Push to Confluence
 
 Platform-specific push instructions for Confluence. Called by the `/push` router command, which has already:
-- Read the file and parsed frontmatter (`wiki_url`, `wiki_title`)
+- Read the file and parsed frontmatter (`source_url`, `source_title`)
 - Determined the page title
 - Extracted markdown content after frontmatter
 - Removed the leading H1 heading (if applicable)
@@ -15,9 +15,9 @@ Continue from here with the prepared content.
    - For each relative link found:
      a. Resolve the full path relative to the current file's directory
      b. Read that target file's YAML frontmatter
-     c. Extract the `wiki_url` value from the target file's frontmatter
-     d. If a `wiki_url` exists, replace the relative link with the Confluence URL
-     e. If no `wiki_url` exists in the target file, leave the link unchanged and note a warning
+     c. Extract the `source_url` value from the target file's frontmatter
+     d. If a `source_url` exists, replace the relative link with the Confluence URL
+     e. If no `source_url` exists in the target file, leave the link unchanged and note a warning
    - This ensures links remain navigable when the markdown is pushed to Confluence
 
 2. **Detect image references in markdown**:
@@ -26,18 +26,18 @@ Continue from here with the prepared content.
    - For each image reference, extract the filename from the path (e.g., `./images/diagram.png` → `diagram.png`)
    - Store the list of image filenames referenced in the document for use in step 4
 
-3. If `wiki_url` EXISTS in the frontmatter:
+3. If `source_url` EXISTS in the frontmatter:
    - Extract the page ID from the URL. The URL format is typically:
      - `https://<domain>.atlassian.net/wiki/x/<shortcode>` - use the shortcode as the page_id
      - `https://<domain>.atlassian.net/wiki/spaces/<space>/pages/<page_id>/<title>` - use the page_id
    - Use `confluence_get_page` with the page_id to retrieve the page metadata, including attachments
    - Build a map of attachment filenames from the response's `attachments` array
 
-4. **Rewrite image references to Confluence attachment URLs** (only when `wiki_url` exists):
+4. **Rewrite image references to Confluence attachment URLs** (only when `source_url` exists):
    - For each image reference found in step 2:
      a. Check if an attachment with that filename exists (from step 3's attachment list)
      b. If attachment EXISTS:
-        - Extract the Confluence domain from the file's `wiki_url` (e.g., `https://mycompany.atlassian.net/wiki/...` → `mycompany.atlassian.net`)
+        - Extract the Confluence domain from the file's `source_url` (e.g., `https://mycompany.atlassian.net/wiki/...` → `mycompany.atlassian.net`)
         - Replace `![alt](./filename.png)` with `![alt](https://{domain}/wiki/download/attachments/{pageId}/filename.png)`
         - Use the page_id extracted in step 3
      c. If attachment DOES NOT EXIST:
@@ -50,7 +50,7 @@ Continue from here with the prepared content.
      Upload these files to the Confluence page manually, then re-run /push
      ```
 
-5. **Diff and confirm** (only when `wiki_url` EXISTS — i.e. updating an existing page):
+5. **Diff and confirm** (only when `source_url` EXISTS — i.e. updating an existing page):
     - Extract the current page body content from the `confluence_get_page` response in step 3 (the API returns the page content)
     - Compare the current Confluence content against the new markdown content (from steps 1–4)
     - Display the differences to the user in a unified-diff style format:
@@ -71,11 +71,11 @@ Continue from here with the prepared content.
     - If the user answers **yes**, continue to step 6
 
 6. Use `confluence_update_page` to update the page with:
-     - `page_id`: The ID extracted from the wiki_url
+     - `page_id`: The ID extracted from the source_url
      - `title`: The determined page title
      - `content`: The markdown content (with image links rewritten)
 
-7. If `wiki_url` does NOT exist in the frontmatter:
+7. If `source_url` does NOT exist in the frontmatter:
     - If any image references were found in step 2, output a warning before creating the page:
       ```
       Note: This document contains images that won't display until uploaded to Confluence.
@@ -83,17 +83,16 @@ Continue from here with the prepared content.
         - image1.png
         - image2.png
       ```
-    - **Load Confluence configuration:** Read `config.json` from the meerkat project root to get `confluence.space_key` and `confluence.parent_id`. If the file does not exist or the confluence fields are empty, ask the user for:
-      - Their Confluence space key (e.g., `~612345abcdef` for a personal space, or `TEAM` for a team space)
-      - The parent page ID under which new pages should be created (the numeric ID from the page URL)
-      - Save these values to the `confluence` object in `config.json` for future use
+    - The `source_url` passed from the router is the **parent page URL** — the page under which the new page will be created
+    - Extract the `space_key` and `parent_id` from the parent page URL:
+      - URL format: `https://<domain>.atlassian.net/wiki/spaces/<space_key>/pages/<parent_id>/...`
     - Use `confluence_create_page` to create a new page with:
-      - `space_key`: from `config.json`
-      - `parent_id`: from `config.json`
+      - `space_key`: extracted from the parent URL
+      - `parent_id`: extracted from the parent URL
       - `title`: The determined page title
       - `content`: The markdown content (image links unchanged since no attachments exist yet)
     - After successful creation, update the original markdown file's frontmatter:
-      - Extract the page URL from the API response (look for `_links.base` + `_links.webui`, or construct from the page `id`)
-      - Use the Edit tool to add `wiki_url: <new-page-url>` to the YAML frontmatter
+      - Extract the new page URL from the API response (look for `_links.base` + `_links.webui`, or construct from the page `id`)
+      - Use the Edit tool to add `source_url: <new-page-url>` to the YAML frontmatter
 
 8. Report success or any errors encountered.
