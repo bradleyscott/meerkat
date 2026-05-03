@@ -6,59 +6,100 @@ linkedin:
 twitter:
 subreddit:
 feed_url:
+slack_channel:
+refresh_due:
 wiki_title:
 wiki_url:
 ---
 
 # {Company Name}
 
-## Executive Summary
+> **Threat level: {High / Medium / Low}** | {One-line descriptor, e.g. "Core platform competitor" or "Adjacent market disruptor"}
 
-<!-- 2-3 paragraph overview: who they are, what they do, market position, and why they matter to us. -->
+**Last updated:** {date}
 
-*Last researched: {date}*
+---
 
-## Overview
+> **TL;DR**
+> - **What:** {Who they are, what they do, and why they matter in one sentence}
+> - **Where they lead:** {Their key competitive strengths relevant to your deals}
+> - **Key threat:** {The single most important thing to understand about this competitor right now}
+> - **Key advantage:** {The single most important reason you win against them}
 
-### Key Facts
+---
 
-| Attribute | Detail |
-|-----------|--------|
-| Founded | |
-| Headquarters | |
-| Employees | |
-| Ownership | |
-| Global Presence | |
+## 🎯 Strategic Assessment
 
-### Leadership
+{1–2 paragraph narrative: what this competitor means for your business today. Justify the threat level and describe any recent shifts in the competitive dynamic.}
 
-| Role | Name | Background |
-|------|------|------------|
-| | | |
+### Where They Win
 
-## Funding
+<!-- Specific deal types, geographies, customer segments, or scenarios where this competitor has an advantage. Be concrete — not "some customers" but "mid-market retailers evaluating..." -->
 
-### Ownership Structure
+-
 
-<!-- Public (ticker), VC-backed, private equity, subsidiary, bootstrapped, etc. -->
+### Where We Win
 
-### Funding History
+<!-- Specific scenarios where you have the clear advantage. -->
 
-| Round | Date | Amount | Investor(s) | Valuation |
-|-------|------|--------|-------------|-----------|
-| | | | | |
+-
 
-## Financials
+### Positioning in a Live Deal
 
-| Metric | Value | Source |
-|--------|-------|--------|
-| Revenue | | |
-| Growth Rate | | |
-| Profitability | | |
-| Customer Count | | |
-| ARR / ACV | | |
+<!-- The one framing shift that matters when competing against this competitor.
+     State the core reframe, then list 2–3 supporting points for when the buyer pushes back. -->
 
-## Products
+### 🗺️ Roadmap Implications
+
+<!-- Do their capabilities suggest product investments to accelerate, deprioritise, or watch? -->
+
+-
+
+### 👀 Key Watch Areas
+
+<!-- Future developments that would materially change the competitive dynamic. Use 🚩 for highest-risk signals. -->
+
+-
+
+---
+
+## 🔑 Value Driver Assessment
+
+<!-- Map each of your company's key value drivers against this competitor's approach.
+     Focus on what matters in competitive deals, not product trivia. -->
+
+| Value driver | Their approach | Assessment | Key implication for deals |
+|-------------|---------------|------------|---------------------------|
+| | | 🟡 Partial | |
+
+<!-- Assessment key: 🟢 Strong | 🟡 Partial | 🔴 Weak -->
+
+---
+
+## 🕐 Recent Developments
+
+<!-- Reverse chronological. Prefix source with ✅ Verified (confirmed public source),
+     💬 Anecdotal (field intel, unverified), or 🔍 Inferred (logical conclusion). -->
+
+| Date | Development | Source |
+|------|-------------|--------|
+| | | ✅ |
+
+---
+
+## 💬 Field Intel from Slack
+
+<!-- First-hand intelligence from internal Slack channels. Always mark confidence level. -->
+
+*Sources: {slack channel names, e.g. #intel-competitor-name}. All [Anecdotal] unless noted.*
+
+| Date | Source | Intel | Confidence |
+|------|--------|-------|------------|
+| | | | 💬 Anecdotal |
+
+---
+
+## 🛠️ Products
 
 ### Product Suite
 
@@ -68,102 +109,89 @@ wiki_url:
 
 ### Technical Capabilities
 
-<!-- Architecture, integrations, platform approach, API strategy, deployment model, etc. -->
+<!-- Architecture, integrations, platform approach, API strategy, deployment model, notable limitations. -->
 
-## Feature Comparison
+---
 
-<!-- Compare the competitor's capabilities against ours in areas that matter for competitive deals.
-     This section is especially valuable for sales enablement and product roadmap decisions. -->
+## 📊 Feature Comparison
 
-| Feature Area | Their Capability | Our Capability | Assessment |
-|-------------|-----------------|----------------|------------|
-| | | | |
+*Assessment key: 🟢 We lead | 🟡 Comparable | 🔴 They lead | ⚪ Not applicable*
 
-<!-- Assessment key:
-  🟢 We lead — clear advantage in this area
-  🟡 Comparable — similar capabilities, may differ in execution
-  🔴 They lead — they have an advantage here
-  ⚪ Unknown — insufficient evidence to assess
--->
+| Feature area | Their capability | Our capability | Customer impact | Assessment |
+|-------------|-----------------|----------------|-----------------|------------|
+| | | | | |
 
-## Customers
+---
 
-| Customer | Region | Details |
-|----------|--------|---------|
+## 👥 Customers
+
+| Customer | Region | Notes |
+|----------|--------|-------|
 | | | |
 
-## Revenue Model
+---
 
-<!-- How they monetise: licensing model (per-user, per-meter, platform fee), pricing structure,
-     implementation/professional services, support tiers, hosting, etc. -->
+## 💰 Pricing Intel
 
-## Employee Sentiment
+<!-- Pricing model, known deal sizes, structure, and any field intelligence on pricing.
+     If pricing is not publicly available, note it and capture any known benchmarks. -->
 
-| Platform | Rating | Review Count |
-|----------|--------|--------------|
-| Glassdoor | /5 | |
+---
 
-### Key Themes
+## 🏢 Company Overview
 
-**Positive:**
--
+### Key Facts
 
-**Negative:**
--
+| Attribute | Detail |
+|-----------|--------|
+| Founded | |
+| Headquarters | |
+| Employees | |
+| Ownership | |
+| Revenue | |
+| Global Presence | |
 
-## Competitive Landscape
+### Leadership
+
+| Role | Name | Background |
+|------|------|------------|
+| | | |
+
+### Funding
+
+<!-- Ownership structure and history. -->
+
+| Round | Date | Amount | Investor(s) | Valuation |
+|-------|------|--------|-------------|-----------|
+| | | | | |
+
+---
+
+## 😐 Employee Sentiment
+
+| Platform | Rating | Reviews | Recommend |
+|----------|--------|---------|-----------|
+| Glassdoor | /5 | | |
+
+**Positive themes:** 
+
+**Negative themes:** 
+
+---
+
+## 🏁 Competitive Landscape
 
 <!-- How this competitor positions themselves in the market. Who do THEY see as their competitors?
-     How do they differentiate? What market segments do they target? -->
+     What market narrative do they push? What segments do they target? -->
 
-## Strengths and Weaknesses
+---
 
-### Strengths
+## 🔗 Sources
 
--
-
-### Weaknesses
-
--
-
-## Recent Developments
-
-<!-- Reverse chronological. Date each entry. Focus on events that signal strategic direction. -->
-
-| Date | Development | Source |
-|------|-------------|--------|
+| Source | URL | Date Accessed |
+|--------|-----|---------------|
 | | | |
 
-## Strategic Assessment
+---
 
-<!-- The "so what" section. What does this competitor mean for our business? -->
-
-### Threat Level: {High / Medium / Low}
-
-<!-- Justify the threat level with specific reasoning tied to your company's strategy and market position. -->
-
-### Where They Win
-
-<!-- Specific deal types, geographies, customer segments, or scenarios where this competitor has an advantage over us. Be concrete — "mid-market UK energy retailers evaluating cloud-native billing" not "some customers." -->
-
-### Where We Win
-
-<!-- Specific deal types, geographies, customer segments, or scenarios where we have the advantage. -->
-
-### Positioning Implications
-
-<!-- How should this competitor's existence and capabilities influence our messaging, sales narratives, and competitive battle cards? What should we emphasise when competing against them? -->
-
-### Roadmap Implications
-
-<!-- Do any of their capabilities suggest product investments we should consider, accelerate, or deprioritise? Are there gaps we need to close or advantages we should extend? -->
-
-### Key Watch Areas
-
-<!-- What future developments from this competitor would materially change the competitive dynamic? What signals should we monitor? e.g., "Entry into the Australian water market would directly threaten our pipeline." -->
-
-## Sources
-
-| Source Type | URL | Date Accessed |
-|-------------|-----|---------------|
-| | | |
+*Data confidence: ✅ Verified = confirmed public source | 💬 Anecdotal = field intel, unverified | 🔍 Inferred = logical conclusion from available info*

@@ -21,6 +21,7 @@ Before first run, ensure the following are set up:
 - **Google Alerts RSS feeds** are configured for each competitor and the `feed_url` field is populated in their frontmatter — this is the primary monitoring signal
 - **Slack MCP** is configured if Slack posting is desired (see Setup section below). If Slack is not configured, the skill still functions — it updates competitor files and outputs a summary to the console
 - **Slack channel** — set the target channel in the `slack.competitive_intel_channel` field in `config.json` at the project root
+- **Slack channel per competitor** — optionally set `slack_channel` in a competitor's frontmatter (e.g. `slack_channel: "#comp-coyote-tech"`) OR add a `Slack channel` row to the Sources table in the document body. The skill will find it in either location and read it for internal competitive signals
 
 ## Urgency Tiers
 
@@ -81,7 +82,7 @@ Read `config.json` at the project root to get the `company_dir` value (e.g., `ac
 
 From the competitor profiles, extract:
 - The list of competitors to monitor
-- Their `feed_url` (Google Alerts RSS), `website`, `blog_url`, `twitter`, `linkedin`, and other source URLs from frontmatter
+- Their source references: `feed_url` (Google Alerts RSS), `website`, `blog_url`, `twitter`, `linkedin`, `slack_channel`, and any other URLs. Check **both** the YAML frontmatter and the document body — a reference found in either location should be used. Common body locations: the **Sources** table (e.g. a `Slack channel` row), or a labeled line anywhere in the document. Frontmatter takes precedence if both are present
 - What's currently documented — you need this to detect what's *new* vs. what's already known
 - Each competitor's current threat level from their Strategic Assessment section
 
@@ -92,6 +93,18 @@ For each competitor, check for new information using these sources in priority o
 **Primary: RSS feeds**
 
 If the competitor has a `feed_url` (Google Alerts RSS), fetch it first. This is the highest-signal source — it aggregates news mentions, press releases, and blog posts that Google has indexed since the last check. Parse the feed items and identify anything not already reflected in the competitor's profile.
+
+**Internal: Slack channel**
+
+If a `slack_channel` reference is found for the competitor (frontmatter or body), read that channel using the Slack MCP (`slack_read_channel`). Focus on recent messages — last 7 days for weekly runs, last 14 days for fortnightly. This channel typically captures first-hand intelligence that never reaches external sources: deal win/loss reports, pricing observations from sales calls, customer comparisons, and field feedback.
+
+When processing Slack messages:
+- First-hand reports (e.g. "we lost a deal because they matched our price") are high confidence — treat them as primary source intelligence
+- Secondhand or forwarded content should be assessed at normal confidence
+- Look for patterns across multiple messages, not just individual posts
+- Attribute findings as `Internal: #channel-name` in the competitor file's Sources table
+
+If Slack MCP is not configured, or no `slack_channel` is defined for the competitor, skip this source silently.
 
 **Secondary: Targeted web searches**
 
@@ -160,7 +173,7 @@ For each competitor with new findings:
 3. If a sentiment sweep was performed, update the **Employee Sentiment** section (ratings, review counts, key themes) and any customer sentiment data in the profile. Note the date and platforms checked in the Sources table
 4. If Act Now or Discuss findings materially change the competitive picture, update the **Strategic Assessment** section — adjust threat level, update "Where They Win/We Win," revise watch areas
 5. Update the **Executive Summary** date stamp if significant changes were made
-6. Add any new sources to the **Sources** table
+6. Add any new sources to the **Sources** table. For findings sourced from a Slack channel, use `Internal: #channel-name` as the source type (no URL needed)
 
 When updating, preserve the existing content and structure. Add to it — don't rewrite sections that haven't changed.
 
