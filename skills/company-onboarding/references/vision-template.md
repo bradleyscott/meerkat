@@ -58,5 +58,5 @@ source_url:
 
 - Vision documents explore the "why and where" of a strategic bet. The roadmap covers the "what and when."
 - The hypothesis section forces clarity: if you can't fill it in crisply, the bet isn't well-defined yet.
-- Key Unknowns is the most actionable section — it feeds directly into the assumption-identifier and validation-suggester skills.
+- Key Unknowns is the most actionable section — it feeds directly into the `/identify-prd-assumptions` and `/suggest-discovery-plan` skills.
 - Keep it to 1–2 pages. This is a strategic exploration, not a PRD.

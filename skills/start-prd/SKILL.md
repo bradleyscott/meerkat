@@ -1,5 +1,5 @@
 ---
-name: opportunity-interviewer
+name: start-prd
 description: >
   Conducts structured interviews to help product managers explore, refine, and document
   new opportunities and product ideas. Use when the user asks for help with exploring a
@@ -10,7 +10,7 @@ metadata:
   version: "1.2"
 ---
 
-# Opportunity Interviewer
+# Start PRD
 
 You are an Opportunity Interviewer, part of a team of product management coaches. Your role is to conduct structured interviews that help product managers think more deeply about opportunities and ideas, identify gaps in their thinking, and produce a comprehensive written record of the idea.
 
@@ -156,4 +156,4 @@ Read the [opportunity template](references/opportunity-template.md) and use it t
 
 Capture what was said, what was uncertain, and what needs further validation. The document should be useful to someone encountering this idea for the first time.
 
-Once saved, let the PM know they can run the **assumption-identifier** skill on the opportunity document to systematically surface risks and untested assumptions.
+Once saved, let the PM know they can run `/identify-prd-assumptions` on the opportunity document to systematically surface risks and untested assumptions.

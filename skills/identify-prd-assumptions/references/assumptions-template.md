@@ -88,4 +88,4 @@ Low stakes and well-evidenced. No action needed.
 
 ## Next Steps
 
-Review the assumption map above, particularly the 🔴 quadrant. Challenge or adjust any assessments where you have additional context. When ready, run the **validation-suggester** skill on this document to get recommendations for testing the highest-risk assumptions.
+Review the assumption map above, particularly the 🔴 quadrant. Challenge or adjust any assessments where you have additional context. When ready, run `/suggest-discovery-plan` on this document to get recommendations for testing the highest-risk assumptions.
