@@ -1,0 +1,18 @@
+{
+  "name": "bradleyscott-meerkat",
+  "description": "Meerkat — a pure-markdown PM framework for Claude Code",
+  "owner": {
+    "name": "Bradley Scott",
+    "url": "https://github.com/bradleyscott"
+  },
+  "plugins": [
+    {
+      "name": "meerkat",
+      "source": ".",
+      "description": "A pure-markdown product management framework — competitive intelligence, opportunity exploration, assumption mapping, and validation planning, grounded in your company context.",
+      "version": "1.0.0",
+      "keywords": ["product-management", "pm", "competitive-intelligence", "assumptions", "validation"],
+      "homepage": "https://github.com/bradleyscott/meerkat"
+    }
+  ]
+}

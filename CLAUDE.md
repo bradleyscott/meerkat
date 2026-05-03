@@ -22,7 +22,7 @@ Other key directories:
 - `skills/` — Reusable AI skill definitions (see skills/README.md)
 - `example/` — Demo content (Acme Anvils) showing the expected format for all document types
 
-Run `/onboard` to create the `context/` directory.
+Run `/meerkat:onboard` (plugin) or `/onboard` (clone) to create the `context/` directory.
 
 ## Document Format
 
@@ -56,14 +56,20 @@ YAML frontmatter with:
 
 ## Source Sync
 
-Documents sync to Confluence, Notion, and other sources using unified push/pull commands. The platform is auto-detected from the `source_url` domain in frontmatter.
+Documents sync to Confluence, Notion, Google Docs, and other sources using unified push/pull commands. The platform is auto-detected from the `source_url` domain in frontmatter:
 
-- `/push path/to/file.md` — creates or updates a source page (Confluence, Notion, etc.)
-- `/pull path/to/file.md` — pulls content from the source page to the local file
+- `atlassian.net` → Confluence
+- `notion.so` → Notion
+- `docs.google.com` / `drive.google.com` → Google Docs
+
+Commands:
+
+- `/meerkat:push path/to/file.md` (plugin) or `/push path/to/file.md` (clone) — creates or updates a source page
+- `/meerkat:pull path/to/file.md` (plugin) or `/pull path/to/file.md` (clone) — pulls content from the source page to the local file
 
 Relative links between markdown files are automatically converted to source URLs when pushing, and back to relative paths when pulling.
 
-No upfront configuration required — platform credentials are handled by MCP servers, and parent page location is provided as a URL on first push.
+No upfront configuration required — platform credentials are handled by MCP servers, and parent page location is provided as a URL on first push. Google Docs push creates a new document (in-place updates are not supported by the Google Drive MCP).
 
 ## Content Guidelines
 

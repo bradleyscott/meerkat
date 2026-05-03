@@ -1,5 +1,5 @@
 ---
-name: company-onboarding
+name: onboard
 description: Sets up your workspace and populates foundational context (company and role) through guided conversation and optional research. Use when starting fresh, onboarding to a new role, or enriching existing context.
 compatibility: Designed for Claude Code (or similar products)
 metadata:

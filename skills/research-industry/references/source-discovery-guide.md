@@ -1,6 +1,6 @@
 # Source Discovery Guide
 
-A reference for identifying and evaluating industry sources by type. Use this during Step 3 of the research-industry-sources skill.
+A reference for identifying and evaluating industry sources by type. Use this during Step 3 of the research-industry skill.
 
 ## Source Types and What They Reveal
 

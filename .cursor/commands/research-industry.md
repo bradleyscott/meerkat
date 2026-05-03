@@ -1,1 +1,1 @@
-Read and follow the complete skill instructions in skills/research-industry-sources/SKILL.md
+Read and follow the complete skill instructions in skills/research-industry/SKILL.md

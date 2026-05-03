@@ -12,11 +12,11 @@ Skills find your company data in the `context/` directory at the repo root (crea
 
 ### Getting Started
 
-| Skill                  | Purpose                                                                                                          | Input                    | Output                                                    |
-|------------------------|------------------------------------------------------------------------------------------------------------------|--------------------------|-----------------------------------------------------------|
-| **company-onboarding** | Sets up your workspace and populates foundational company context through guided conversation and optional research | Conversation with the PM | Company profile, strategy, revenue model, directory structure |
+| Skill        | Purpose                                                                                                          | Input                    | Output                                                    |
+|--------------|------------------------------------------------------------------------------------------------------------------|--------------------------|-----------------------------------------------------------|
+| **onboard**  | Sets up your workspace and populates foundational company context through guided conversation and optional research | Conversation with the PM | Company profile, strategy, revenue model, directory structure |
 
-Run `/onboard` as your first step. The skill gathers basic information about your company and product, optionally researches public data to enrich the context, and creates the document structure that all other skills depend on. It can also be re-run to update or enrich existing context.
+Run `/onboard` (clone) or `/meerkat:onboard` (plugin) as your first step. The skill gathers basic information about your company and product, optionally researches public data to enrich the context, and creates the document structure that all other skills depend on. It can also be re-run to update or enrich existing context.
 
 ### Opportunity Pipeline
 
@@ -86,15 +86,15 @@ research-competitors → monitor-competitors (scheduled)
 Two complementary skills for industry research and ongoing monitoring, mirroring the competitive intelligence pattern:
 
 ```
-research-industry-sources → monitor-industry (scheduled)
+research-industry → monitor-industry (scheduled)
 ```
 
 | Skill | Purpose | Input | Output |
 | --- | --- | --- | --- |
-| **research-industry-sources** | Discovers and curates industry sources organised around strategic topics | Conversation with the PM | `context/industry/landscape.md` |
+| **research-industry** | Discovers and curates industry sources organised around strategic topics | Conversation with the PM | `context/industry/landscape.md` |
 | **monitor-industry** | Scans industry sources for developments and alerts the team via Slack | Runs autonomously on a schedule | `context/industry/digests/{date}.md` + Slack posts |
 
-- **research-industry-sources** is interactive — it helps the PM identify strategic topics and curate high-value sources for each
+- **research-industry** is interactive — it helps the PM identify strategic topics and curate high-value sources for each
 - **monitor-industry** is autonomous — it scans sources, classifies findings by urgency, and posts strategic implications to Slack
 - Sources are organised around **strategic topics** derived from company strategy and roadmap, not a flat list
 - Uses the same urgency tier system (Act Now / Discuss / FYI) as competitor monitoring for consistency
@@ -103,15 +103,17 @@ research-industry-sources → monitor-industry (scheduled)
 
 ### Source Sync
 
-Bidirectional sync between local markdown files and external sources (Confluence, Notion, and others):
+Bidirectional sync between local markdown files and external sources (Confluence, Notion, Google Docs):
 
 | Skill | Purpose | Input | Output |
 | --- | --- | --- | --- |
-| **source-sync** | Push/pull markdown files to/from Confluence or Notion | `/push path/to/file.md` or `/pull path/to/file.md` | Updated source page or local file |
+| **push** | Push markdown files to an external source | `/push path/to/file.md [source-url]` | Created or updated source page |
+| **pull** | Pull content from an external source to local markdown | `/pull path/to/file.md [source-url]` | Updated local file |
 
-- Platform is auto-detected from the `source_url` domain in frontmatter
+- Platform is auto-detected from the `source_url` domain in frontmatter: `atlassian.net` → Confluence, `notion.so` → Notion, `docs.google.com` / `drive.google.com` → Google Docs
 - Relative links between markdown files are automatically converted to source URLs when pushing, and back to relative paths when pulling
-- Platform-specific logic lives in `skills/source-sync/push-{platform}.md` and `pull-{platform}.md`
+- On first push, provide a parent page URL — the `source_url` is written back to the file's frontmatter for future syncs
+- Google Docs push creates a new document each time (the Google Drive MCP does not support in-place content updates)
 
 ## Skill Structure
 
@@ -132,14 +134,18 @@ skills/identify-prd-assumptions/
 
 ### Claude Code
 
-This repo ships with pre-configured commands in `.claude/commands/` — all skills work as slash commands out of the box. Just clone and start using `/onboard`, `/start-prd`, etc.
+**Option 1 — Install as a plugin (recommended):**
 
-Claude Code also discovers skills automatically from `.claude/skills/`. If you prefer that approach, symlink the skill directories:
-
-```bash
-ln -s ../../skills/start-prd .claude/skills/start-prd
-ln -s ../../skills/identify-prd-assumptions .claude/skills/identify-prd-assumptions
 ```
+/plugin marketplace add bradleyscott/meerkat
+/plugin install meerkat@bradleyscott-meerkat
+```
+
+Skills are available as `/meerkat:onboard`, `/meerkat:start-prd`, etc. in any project.
+
+**Option 2 — Clone the repo:**
+
+This repo ships with pre-configured commands in `.claude/commands/` — all skills work as slash commands out of the box. Just clone and start using `/onboard`, `/start-prd`, etc.
 
 Claude Code auto-invokes skills when it recognises a relevant request from the skill's `description` field.
 

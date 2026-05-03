@@ -1,5 +1,5 @@
 ---
-name: research-industry-sources
+name: research-industry
 description: >
   Discovers and curates industry sources, publications, analysts, and thought leaders
   organised around strategic topics derived from company context. Use when onboarding to
