@@ -24,17 +24,20 @@ I built this because I wanted an AI thinking partner that could help me apply pr
 
 ### Opportunity Pipeline
 
-Four skills that compose into a pipeline, taking you from raw customer interviews through to a validated experiment plan:
+Six skills that compose into a complete pipeline, taking you from raw customer interviews all the way through to a delivery-ready opportunity document:
 
 ```
-/extract-insights ──→ /opportunity-interview → /identify-assumptions → /suggest-validation
-                  └─→ /identify-assumptions   (direct risk analysis on any document)
+/synthesise-research ──→ /start-prd → /identify-prd-assumptions → /suggest-discovery-plan
+                     └─→ /identify-prd-assumptions   (direct risk analysis on any document)
+
+[run discovery] → /synthesise-research → [iterate] → /check-prd-ready → [hand off to engineering]
 ```
 
-- **Insights Extractor** (`/extract-insights`) — Analyses interview transcripts with rigorous provenance tracking. Every insight traces back to a verbatim quote and a specific participant.
-- **Opportunity Interviewer** (`/opportunity-interview`) — A Socratic interview that pushes you to articulate and defend your product idea. It asks about past behaviour, not hypotheticals.
-- **Assumption Identifier** (`/identify-assumptions`) — Reads any product document and surfaces hidden risks across desirability, viability, feasibility, and usability. Maps them on a 2x2 matrix of importance vs. evidence to help you focus on the riskiest assumptions.
-- **Validation Suggester** (`/suggest-validation`) — Designs targeted experiments matched to the nature of each assumption and your specific context.
+- **Synthesise Research** (`/synthesise-research`) — Analyses interview transcripts with rigorous provenance tracking. Accepts local files, Notion pages, Confluence pages, Google Drive docs, or any URL. Every insight traces back to a verbatim quote and a specific participant.
+- **Start PRD** (`/start-prd`) — A Socratic interview that pushes you to articulate and defend your product idea. Optionally launches background research agents to ground the conversation in evidence.
+- **Identify PRD Assumptions** (`/identify-prd-assumptions`) — Reads any product document and surfaces hidden risks across desirability, viability, feasibility, and usability. Maps them on a 2x2 matrix of importance vs. evidence.
+- **Suggest Discovery Plan** (`/suggest-discovery-plan`) — Designs targeted experiments matched to the nature of each assumption and your specific context.
+- **Check PRD Ready** (`/check-prd-ready`) — Audits an opportunity document for delivery readiness. Flags gaps by severity (Blocker / Should address / Nice to have) before handoff to engineering.
 
 Each skill can be used independently, but they're designed to flow together — the output of one becomes the input for the next.
 
@@ -64,7 +67,7 @@ cd my-pm-context
 Then in [Claude Code](https://claude.ai/code) or [Cursor](https://cursor.com):
 
 1. Run `/onboard` — a guided conversation that captures your company, product, and role context, then builds your workspace
-2. Run `/opportunity-interview` to explore your first product idea
+2. Run `/start-prd` to explore your first product idea
 3. Run `/research-competitors` to profile a key competitor
 
 Slash commands work out of the box with both **Claude Code** and **Cursor** — no extra configuration needed. For Amazon Q or other AI coding tools, see the [skills setup guide](skills/README.md#setting-up-skills-in-ai-coding-tools).

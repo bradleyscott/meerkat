@@ -1,0 +1,1 @@
+Read and follow the complete skill instructions in skills/start-prd/SKILL.md

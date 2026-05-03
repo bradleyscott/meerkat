@@ -227,13 +227,13 @@ If the PM wants to review or refine, open the relevant file and work through it 
 Recommend the logical next actions based on what was created. Tailor recommendations to what's actually thin or missing — don't give a generic list.
 
 1. **If competitors were named:** "Run `/research-competitors {name}` to build a full profile for each competitor. This is the most impactful next step."
-2. **If OKRs were thin or missing:** "Add your OKRs to `context/product/okrs.md` — skills like the assumption-identifier use these to assess strategic fit."
+2. **If OKRs were thin or missing:** "Add your OKRs to `context/product/okrs.md` — skills like `/identify-prd-assumptions` use these to assess strategic fit."
 3. **If role context was thin:** "Flesh out your role context in `context/role/context.md` — it helps skills calibrate recommendations to your team size and influence."
 4. **If source documents weren't provided:** "Drop any strategy decks, annual reports, or product briefs into `context/company/source-docs/`. You can run `/onboard` again to read them and enrich your context."
-5. **If roadmap was thin or no vision docs exist:** "Consider writing vision documents for your key strategic bets in `context/product/vision/`. Each one explores a single bet — the hypothesis, success criteria, unknowns, and risks. These feed directly into `/identify-assumptions`."
+5. **If roadmap was thin or no vision docs exist:** "Consider writing vision documents for your key strategic bets in `context/product/vision/`. Each one explores a single bet — the hypothesis, success criteria, unknowns, and risks. These feed directly into `/identify-prd-assumptions`."
 6. **If the PM is new to the domain:** "Run `/research-industry` to discover the key publications, analysts, regulatory bodies, and thought leaders in your industry. This sets up ongoing monitoring of industry trends that could affect your strategy."
 7. **If personas don't exist yet:** "Create user and buyer personas in `context/personas/` — these describe who uses your product and who buys it. They enrich insights extraction, opportunity exploration, and validation planning. See `example/personas/` for the expected format and templates."
-8. **Always:** "Try `/opportunity-interview` to explore a product idea, or `/research-competitors` to deep-dive a competitor. These skills read the context you just created to provide grounded, specific recommendations."
+8. **Always:** "Try `/start-prd` to explore a product idea, or `/research-competitors` to deep-dive a competitor. These skills read the context you just created to provide grounded, specific recommendations."
 
 ## Principles
 

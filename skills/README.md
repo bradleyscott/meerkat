@@ -23,18 +23,21 @@ Run `/onboard` as your first step. The skill gathers basic information about you
 These skills compose into a pipeline, with each skill's output feeding the next:
 
 ```
-insights-extractor ──→ opportunity-interviewer → assumption-identifier → validation-suggester
-                   └─→ assumption-identifier   (direct risk analysis)
+synthesise-research ──→ start-prd → identify-prd-assumptions → suggest-discovery-plan
+                    └─→ identify-prd-assumptions   (direct risk analysis)
+
+[run discovery] → synthesise-research → [iterate] → check-prd-ready → [hand off]
 ```
 
 | Skill | Purpose | Input | Output |
 |-------|---------|-------|--------|
-| **insights-extractor** | Extracts product insights from interview transcripts with rigorous provenance tracking, and proposes updates to persona files | Interview transcript(s) | Individual analyses + synthesis document |
-| **opportunity-interviewer** | Conducts a structured interview to explore and document a product idea | Conversation with the PM | `opportunity.md` |
-| **assumption-identifier** | Analyses a document to surface hidden risks and untested assumptions, then maps them by importance and evidence | Any product idea document | `assumptions.md` |
-| **validation-suggester** | Recommends targeted experiments to test the highest-risk assumptions | An assumptions document | `validation-plan.md` |
+| **synthesise-research** | Extracts product insights from interview transcripts with rigorous provenance tracking. Accepts local files, Notion, Confluence, Google Drive, or any URL. Also proposes updates to persona files. | Interview transcript(s) | Individual analyses + synthesis document |
+| **start-prd** | Conducts a structured interview to explore and document a product idea. Optionally launches background research agents. | Conversation with the PM | `opportunity.md` |
+| **identify-prd-assumptions** | Analyses a document to surface hidden risks and untested assumptions, then maps them by importance and evidence | Any product idea document | `assumptions.md` |
+| **suggest-discovery-plan** | Recommends targeted experiments to test the highest-risk assumptions | An assumptions document | `validation-plan.md` |
+| **check-prd-ready** | Audits an opportunity document for delivery readiness — flags gaps by severity before handoff to engineering | An opportunity document | `readiness-check.md` |
 
-Each skill can also be used independently — the assumption-identifier can analyse any document, not just interviewer output. The insights-extractor can feed directly into the assumption-identifier or into the opportunity-interviewer for deeper exploration.
+Each skill can also be used independently — `identify-prd-assumptions` can analyse any document, not just `start-prd` output. `synthesise-research` can feed directly into `identify-prd-assumptions` or into `start-prd` for deeper exploration.
 
 #### Output Convention
 
@@ -42,9 +45,10 @@ Each opportunity gets its own folder under `outputs/opportunities/`:
 
 ```
 outputs/opportunities/mobile-billing-app/
-  opportunity.md        ← from opportunity-interviewer
-  assumptions.md        ← from assumption-identifier
-  validation-plan.md    ← from validation-suggester
+  opportunity.md        ← from start-prd
+  assumptions.md        ← from identify-prd-assumptions
+  validation-plan.md    ← from suggest-discovery-plan
+  readiness-check.md    ← from check-prd-ready
 ```
 
 Interview insights are stored separately under `outputs/insights/`:
@@ -114,7 +118,7 @@ Bidirectional sync between local markdown files and wiki platforms (Confluence, 
 Each skill is a directory containing a `SKILL.md` file and supporting references:
 
 ```
-skills/assumption-identifier/
+skills/identify-prd-assumptions/
 ├── SKILL.md                           # Main instructions and workflow
 └── references/
     ├── assumptions-template.md        # Output template
@@ -128,20 +132,20 @@ skills/assumption-identifier/
 
 ### Claude Code
 
-This repo ships with pre-configured commands in `.claude/commands/` — all skills work as slash commands out of the box. Just clone and start using `/onboard`, `/opportunity-interview`, etc.
+This repo ships with pre-configured commands in `.claude/commands/` — all skills work as slash commands out of the box. Just clone and start using `/onboard`, `/start-prd`, etc.
 
 Claude Code also discovers skills automatically from `.claude/skills/`. If you prefer that approach, symlink the skill directories:
 
 ```bash
-ln -s ../../skills/opportunity-interviewer .claude/skills/opportunity-interviewer
-ln -s ../../skills/assumption-identifier .claude/skills/assumption-identifier
+ln -s ../../skills/start-prd .claude/skills/start-prd
+ln -s ../../skills/identify-prd-assumptions .claude/skills/identify-prd-assumptions
 ```
 
 Claude Code auto-invokes skills when it recognises a relevant request from the skill's `description` field.
 
 ### Cursor
 
-This repo ships with pre-configured commands in `.cursor/commands/` and project rules in `.cursor/rules/` — all skills work as slash commands out of the box. Just clone and start using `/onboard`, `/opportunity-interview`, etc.
+This repo ships with pre-configured commands in `.cursor/commands/` and project rules in `.cursor/rules/` — all skills work as slash commands out of the box. Just clone and start using `/onboard`, `/start-prd`, etc.
 
 Type `/` in the Cursor Agent input to see all available commands.
 
@@ -159,7 +163,7 @@ Amazon Q Developer CLI supports custom prompts via the `/dev` command and contex
 
 1. When starting a task, reference the skill file directly:
    ```
-   /dev Read skills/assumption-identifier/SKILL.md and follow those instructions to analyse product/my-feature.md
+   /dev Read skills/identify-prd-assumptions/SKILL.md and follow those instructions to analyse product/my-feature.md
    ```
 
 2. Alternatively, add a `.qdeveloper/context.md` file that points to the skills directory so the assistant is aware of available workflows.

@@ -40,7 +40,7 @@ pm: [Product Manager name if known]
 
 ## Key Assumptions
 
-[Critical assumptions that need to be validated — these are initial observations, not a systematic analysis. Run the assumption-identifier for a thorough risk assessment.]
+[Critical assumptions that need to be validated — these are initial observations, not a systematic analysis. Run `/identify-prd-assumptions` for a thorough risk assessment.]
 
 ## Open Questions
 
