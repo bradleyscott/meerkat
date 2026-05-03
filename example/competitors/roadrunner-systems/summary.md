@@ -103,7 +103,10 @@ Supporting points:
 
 | Date | Source | Intel | Confidence |
 |------|--------|-------|------------|
-| | | | |
+| 2026-01-30 | Eloise Peck | Wile E. Coyote confirmed he's using both Acme and a Catch Zone membership — not replacing Acme yet, but "budgeting for more Catch Zone sessions in FY27." Worth watching at renewal. | 💬 Anecdotal |
+| 2026-01-09 | Sam Tregidga | Roadrunner actively pitching the Catch Zone franchise model to two regional wildlife reserves in our pipeline — Verde Valley and Sonoran Trust. Neither has been an Acme customer but both were warm prospects. Roadrunner may close them before we get there. | 💬 Anecdotal |
+| 2025-12-04 | Eloise Peck | Spoke with a Roadrunner Catch Zone operator at an industry dinner. Said profitability per session is very strong but location buildout costs are "eye-watering" — hinting Canyon Capital is getting impatient with the capex. Franchise model is a response to pressure, not a sign of strength. | 💬 Anecdotal — single source |
+| 2025-09-17 | Account team | Wild West Holdings (Acme customer, Texas) asked their account manager about the Catch Zone membership programme during QBR. Said a competitor had mentioned it. Not an active evaluation but first time a core Acme account has raised it unprompted. | 💬 Anecdotal |
 
 ---
 

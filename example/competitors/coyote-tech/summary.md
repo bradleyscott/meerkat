@@ -102,7 +102,10 @@ Supporting points:
 
 | Date | Source | Intel | Confidence |
 |------|--------|-------|------------|
-| | | | |
+| 2026-01-28 | Wile E. Coyote (via account team) | Wile mentioned he'd been demoed Canyon Mode. Said it looked impressive in the sales environment but he was "waiting to see it work in the Painted Desert before he'd switch." No indication he's actively evaluating. | 💬 Anecdotal |
+| 2026-01-14 | Roadrunner Show floor, Eloise Peck | Coyote Tech booth was busy. Two Acme customers spotted in conversation with their sales reps — Desert Fox Enterprises and ToonCatch. Both are renewal accounts this quarter. | 💬 Anecdotal |
+| 2025-11-03 | Sam Tregidga | Lost a deal at Mesa Canyon Pest Control to Coyote Tech. Buyer cited "autonomous operation" as a must-have. Price wasn't the issue — they wanted no human in the loop. Coyote beat us on the use case, not on cost. | 💬 Anecdotal |
+| 2025-10-19 | Eloise Peck | Spoke with a former Coyote Tech engineer at a conference. Said the Canyon Mode GPS-denied nav is "held together with string" internally — the beta launch is a marketing move to buy time while they rebuild the nav stack. | 💬 Anecdotal — treat as unverified |
 
 ---
 
