@@ -1,6 +1,0 @@
-{
-    "slack": {
-        "competitive_intel_channel": "#competitive-intel",
-        "industry_intel_channel": "#industry-intel"
-    }
-}

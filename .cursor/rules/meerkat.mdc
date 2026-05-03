@@ -27,7 +27,7 @@ Other key directories:
 - `skills/` — Reusable AI skill definitions (see skills/README.md)
 - `example/` — Demo content (Acme Anvils) showing the expected format for all document types
 
-Run `/onboard` to create the `context/` directory and populate `config.json`.
+Run `/onboard` to create the `context/` directory.
 
 ## Document Format
 

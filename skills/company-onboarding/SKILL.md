@@ -155,7 +155,6 @@ context/outputs/insights/
 
 **5b. Write configuration:**
 
-- Write `config.json` with default settings (Slack channels, empty Confluence config). If `config.json` already exists, preserve existing settings.
 - Add `context/` to `.gitignore` if not already present
 
 **5c. Create documents:**

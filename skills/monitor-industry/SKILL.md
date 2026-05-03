@@ -24,7 +24,7 @@ Before first run, ensure the following are set up:
 - **Industry landscape** exists at `context/industry/landscape.md` with strategic topics and curated sources. The company directory name is read from the `context/` directory at the repo root
 - **Google Alerts RSS feeds** are configured for each strategic topic and the feed URLs are populated in the landscape document — this is the primary monitoring signal
 - **Slack MCP** is configured if Slack posting is desired (see Setup section below). If Slack is not configured, the skill still functions — it writes the digest and outputs a summary to the console
-- **Slack channel** — set the target channel in the `slack.industry_intel_channel` field in `config.json` at the project root
+- **Slack channel** — set the `slack_channel` field in `context/industry/landscape.md` frontmatter (e.g. `slack_channel: "#industry-intel"`). If absent, Slack posting is skipped silently
 
 ## Urgency Tiers
 
@@ -198,7 +198,7 @@ Read the [Slack update template](references/industry-slack-template.md) and comp
 - Include Act Now and Discuss items only — mention FYI count at the bottom
 - Tag entries with the relevant strategic topic for context
 
-Post to the channel specified in the `slack.industry_intel_channel` field in `config.json`. Use the Slack MCP to send the message.
+Post to the channel specified in the `slack_channel` field of `context/industry/landscape.md` frontmatter. Use the Slack MCP to send the message.
 
 **Slack message quality bar:**
 
@@ -246,7 +246,7 @@ The Slack MCP server enables posting industry intelligence updates to a Slack ch
 
 1. Follow the setup instructions at https://docs.slack.dev/ai/slack-mcp-server/
 2. Ensure the MCP server has permission to post messages to the target channel
-3. Set the `slack.industry_intel_channel` field in `config.json` to match your channel name or ID
+3. Set the `slack_channel` field in `context/industry/landscape.md` frontmatter to your channel name or ID
 
 If the Slack MCP is not available, the skill operates normally — it writes digests and outputs a summary to the console. Slack posting is simply skipped.
 
